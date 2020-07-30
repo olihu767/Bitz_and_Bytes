@@ -1,5 +1,5 @@
 // https://css-tricks.com/using-fetch/
-fetch('https://cprg210-travel.herokuapp.com/api/destinations')
+fetch('https:// https://travel-experts-prototype.herokuapp.com/api/destinations')
   .then(function(response) {
     return response.json();
   })
