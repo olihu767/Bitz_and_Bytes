@@ -39,9 +39,6 @@ corsOptions = {
 };
 app.use(cors(corsOptions));
 
-// Capturing form data in MongoDB
-app.use(bodyParser.urlencoded({ extended: false }));
-
 // automatically check if requested file is found in /public. If yes, return that file as a response to the browser
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -100,25 +97,6 @@ app.use(function(req, res, next) {
 const yearFormat="YYYY"
 app.locals.moment = moment;
 app.locals.yearFormat = yearFormat;
-
-// capture form data into MongoBD
-app.post('/post-feedback', function (req, res) {
-  dbConn.then(function(db) {
-      delete req.body._id; // for safety reasons
-      db.collection('feedbacks').insertOne(req.body);
-  });    
-  res.send('Data received:\n' + JSON.stringify(req.body));
-});
-
-// feedback test..
-app.get('/view-feedbacks',  function(req, res) {
-  dbConn.then(function(db) {
-      db.collection('feedbacks').find({}).toArray().then(function(feedbacks) {
-          res.status(200).json(feedbacks);
-      });
-  });
-});
-
 
 // start up server
 const PORT = process.env.PORT || 3000;
