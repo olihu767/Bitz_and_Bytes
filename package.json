@@ -1,21 +1,25 @@
 {
-  "name": "labs",
+  "name": "Bitz_and_Bytes",
   "version": "1.0.0",
-  "description": ,
-  "main": "app.js",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "ejs": "^3.1.3",
-    "express": "^4.17.1",
-    "moment": "^2.27.0",
-    "mongoose": "^5.9.25"
-  },
-  "devDependencies": {},
+  "description": "",
+  "main": "_build.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olihu767/Bitz_and_Bytes.git"
+  },
+  "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olihu767/Bitz_and_Bytes/issues"
+  },
+  "homepage": "https://github.com/olihu767/Bitz_and_Bytes#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.9"
+  }
 }

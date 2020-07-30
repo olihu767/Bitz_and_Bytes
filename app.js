@@ -7,7 +7,6 @@ const cors = require('cors');
 const moment = require('moment');
 const today = moment(); 
 
-
 // Our Model
 const Destinations = require('./models/destinations.js');
 
