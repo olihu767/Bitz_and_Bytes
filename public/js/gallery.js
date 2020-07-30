@@ -1,5 +1,5 @@
-// https://css-tricks.com/using-fetch/
-fetch('https:// https://travel-experts-prototype.herokuapp.com/api/destinations')
+ fetch('http://localhost:3000/api/destinations') 
+// fetch('https:// https://travel-experts-prototype.herokuapp.com/api/destinations')
   .then(function(response) {
     return response.json();
   })
