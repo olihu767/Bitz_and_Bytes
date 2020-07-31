@@ -1,5 +1,5 @@
-//  fetch('http://localhost:3000/api/destinations') 
- fetch('https://cprg210-travel.herokuapp.com/api/destinations')
+ fetch('http://localhost:3000/api/destinations') 
+//  fetch('https://cprg210-travel.herokuapp.com/api/destinations')
   .then(function(response) {
     return response.json();
   })

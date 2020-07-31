@@ -45,19 +45,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Define an endpoint handlers for the home page to render 
 app.get('/', function(request, response){
   response.render('index',{});
-})
+});
 
 app.get('/login', function(request, response){
   response.render('login',{});
-})
+});
 
 app.get('/register', function(request, response){
   response.render('register',{});
-})
+});
 
 app.get('/gallery', function(request, response){
   response.render('gallery',{});
-})
+});
 
 // Define an endpoint handler for the individual destination pages
 app.get('/:id', function(request, response){
@@ -68,12 +68,12 @@ app.get('/:id', function(request, response){
 // Check for IDs that are not in our list
 if (!destinations) {
   return response.send('Invalid ID.');
-}
+};
 
 // Compile view and respond
 response.render('destinations',destinations);
 });
-})
+});
 
 // Create a JSON (no EJS here) that returns the entire destination JSON
 // This is the endpoint that the frontend gallery script calls (see: ./public/js/gallery.js).
@@ -84,8 +84,7 @@ app.get('/api/destinations', function(request, response){
 Destinations.find(function(error, destinations) { 
   response.json(destinations);
 });
-
-})
+});
 
 // if no file or endpoint found, send a 404 error as a response to the browser
 app.use(function(req, res, next) {
