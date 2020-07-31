@@ -28,6 +28,18 @@ db.once('open', function() {
   console.log('Connected to DB...');
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
 // create express app
 const app = express();
 app.set('view engine', 'ejs');

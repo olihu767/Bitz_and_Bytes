@@ -35,9 +35,9 @@
 //   .then(function(response) {
 //     return response.json();
 //   })
-//   .then(function(destinations) {
+//   .then(function(packages) {
 
-//    const imgList = destinations;
+//    const imgList = packages;
 
    
 //     let imgTemplate = ''; 
