@@ -1,12 +1,12 @@
 // import all modules
-const path = require('path');
-const express = require('express');
-const mongoose = require('mongoose');
-const dotenv = require('dotenv').config();
-const cors = require('cors');
-const moment = require('moment');
-const today = moment(); 
-const bodyParser = require('body-parser');
+path       = require('path'),
+express    = require('express'),
+mongoose   = require('mongoose'),
+dotenv     = require('dotenv').config(),
+cors       = require('cors'),
+moment     = require('moment'),
+today      = moment(),
+bodyParser = require('body-parser');
 
 // Our Model
 const Destinations = require('./models/destinations.js');
