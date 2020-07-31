@@ -1,55 +1,26 @@
 // import all modules
-path       = require('path'),
-express    = require('express'),
-mongoose   = require('mongoose'),
-dotenv     = require('dotenv').config(),
-cors       = require('cors'),
-moment     = require('moment'),
-today      = moment(),
-bodyParser = require('body-parser');
+const path = require('path');
+const express = require('express');
+const mongoose = require('mongoose');
+const dotenv = require('dotenv').config();
+const cors = require('cors');
+const moment = require('moment'); 
+const today      = moment();
+const bodyParser = require('body-parser');
 
 // Our Model
-const Destinations = require('./models/destinations.js');
-
-// Hide creds from repo
-const mongoDB = process.env.MONGODB_URL;
-
-// Set up default mongoose connection
-mongoose.connect(mongoDB, { useUnifiedTopology: true,useNewUrlParser: true });
-
-// Get the default connection
-const db = mongoose.connection;
-
-// Bind connection to error event (to get notification of connection errors)
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-
-// Set a callback to let us know we've successfully connected
-db.once('open', function() {
-  console.log('Connected to DB...');
-});
-
-
-
-
-
-
-
-
-
-
-
-
+const { userInfo } = require('os');
 
 // create express app
 const app = express();
 app.set('view engine', 'ejs');
 
 // Cors origin URL - Allow inbound traffic from origin //
-corsOptions = {
-  origin: "https://travel-experts-prototype.herokuapp.com/",
-  optionsSuccessStatus: 200 
-};
-app.use(cors(corsOptions));
+// corsOptions = {
+//   origin: "https://travel-experts-prototype.herokuapp.com/",
+//   optionsSuccessStatus: 200 
+// };
+// app.use(cors(corsOptions));
 
 // automatically check if requested file is found in /public. If yes, return that file as a response to the browser
 app.use(express.static(path.join(__dirname, 'public')));
@@ -72,37 +43,8 @@ app.get('/gallery', function(request, response){
 });
 
 // Define an endpoint handler for the individual destination pages
-app.get('/:id', function(request, response){
+// app.get('/:id', function(request, response){
 
-// model.findOne returns the first object it finds. It will always return an array, even if it only finds one. 
-  Destinations.findOne({'id': request.params.id}, function(error, destinations) {
-  
-// Check for IDs that are not in our list
-if (!destinations) {
-  return response.send('Invalid ID.');
-};
-
-// Compile view and respond
-response.render('destinations',destinations);
-});
-});
-
-// Create a JSON (no EJS here) that returns the entire destination JSON
-// This is the endpoint that the frontend gallery script calls (see: ./public/js/gallery.js).
-app.get('/api/destinations', function(request, response){
-
-// response.json(destinations);
-
-Destinations.find(function(error, destinations) { 
-  response.json(destinations);
-});
-});
-
-// if no file or endpoint found, send a 404 error as a response to the browser
-app.use(function(req, res, next) {
-  res.status(404);
-  res.render('404', {page:"404"});
-});
 
 // add current year using moment module
 const yearFormat="YYYY"
@@ -115,3 +57,32 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, function(){
   console.log(`Listening on port ${PORT}`);
 });
+
+
+mongoose.connect("mongodb://localhost:27017/register_user", { useUnifiedTopology: true,useNewUrlParser: true });
+
+//SCHEMA SETUP
+const register_userSchema = new mongoose.Schema({
+  name: String,
+});
+
+const Register_user = mongoose.model("register_user", register_userSchema);
+
+Register_user.create(
+  {
+    name: "name_input"
+  }, function(err, register_user){
+    if(err){
+      console.log(err);
+
+      }
+       else {
+         console.log("new registered user: ");
+         console.log(register_usser);
+       }
+    });
+    
+const register_user = [
+  {name: "Dave"}
+]
+
