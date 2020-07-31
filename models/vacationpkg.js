@@ -12,4 +12,4 @@
 //   }
 // );
 
-// module.exports = mongoose.model('Destination', gallerySchema);
+// module.exports = mongoose.model('Vacationpkg', gallerySchema);
