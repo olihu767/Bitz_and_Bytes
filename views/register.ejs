@@ -12,16 +12,18 @@
      <form action="/" method="post">
        <div class="container_register">
          <h2 id="register">Registration Page</h2>
-          <input type = "text" placeholder = "id" name = "customerId">
-          <input type = "text" placeholder = "firstName" name = "firstName">
-          <input type = "text" placeholder = "" name = "">
-          <input type = "text" placeholder = "" name = "">
-          <input type = "text" placeholder = "" name = "">
-          <input type = "text" placeholder = "" name = "">
-          <input type = "text" placeholder = "" name = "">
-          <input type = "text" placeholder = "" name = "">
-          <input type = "text" placeholder = "" name = "">
-        </div>
+          <input type = "text" placeholder = "Enter First Name" name = "firstName">
+          <input type = "text" placeholder = "Enter Last Name" name = "lastName">
+          <input type = "text" placeholder = "Enter Street Address" name = "address">
+          <input type = "text" placeholder = "Enter City" name = "city">
+          <input type = "text" placeholder = "Enter Province" name = "prov">
+          <input type = "text" placeholder = "Enter Postal Code" name = "postal">
+          <input type = "text" placeholder = "Enter Home Phone Number" name = "homePhone">
+          <input type="email" placeholder="Enter your email address" name="email" required>
+          <input type = "text" placeholder = "Create a User Name" name = "userid"required>
+          <input type="password" placeholder="Enter a Password" name="passwd" minlength="8" required>
+          <button>Submit!</button>
+      </div>
      </form>
    </main>
     <%- include('./partials/js-gallery'); %>
