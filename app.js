@@ -96,6 +96,32 @@ Customer.create(newCustomer, function(err, newlyCreated){
 //   res.render("order.ejs")
 // });
 
+
+// .findOne returns the first object it finds //
+// Destinations.findOne({'id': request.params.id}, function(error, destinations) {
+  // Check for IDs that are not in the list //
+  // if (!destinations) {
+  //   return response.send('Sorry Invalid ID.');
+  // }
+  // Compile view and respond //
+//   response.render('destinations',destinations);
+//   });
+// });
+
+// This is the endpoint that the frontend gallery script calls //
+// app.get('/api/destinations', function(request, response,){
+
+// Destinations.find(function(error, destinations) { 
+//   response.json(destinations);
+//   });
+// });
+
+
+
+
+
+
+
 // add current year using moment module
 const yearFormat="YYYY"
   app.locals.moment = moment;
