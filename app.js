@@ -51,36 +51,34 @@ app.get('/gallery', function(request, response){
 });
 
 
-// const Agency = require("./models/agency.js");
-
 app.post ("/", function(req, res){
 
   const firstName = req.body.firstName;
-  const lastName = req.body.lastName;
-  const address = req.body.address;
-  const city = req.body.city;
-  const prov = req.body.prov;
-  const postal = req.body.postal;
-  const country = req.body.country;
+  const lastName =  req.body.lastName;
+  const address =   req.body.address;
+  const city =      req.body.city;
+  const prov =      req.body.prov;
+  const postal =    req.body.postal;
+  const country =   req.body.country;
   const homePhone = req.body.homePhone;
-  const busPhone = req.body.busPhone;
-  const userid = req.body.userid;
-  const pswwd = req.body.psswd;
-  const email = req.body.email;
+  const busPhone =  req.body.busPhone;
+  const userid =    req.body.userid;
+  const pswwd =     req.body.psswd;
+  const email =     req.body.email;
   
   const newCustomer = {
     CustFirstName: firstName,
-    CustLastName: lastName,
-    CustAddress: address,
-    CustCity: city,
-    CustProv: prov,
-    CustPostal: postal,
-    CustCountry: country,
+    CustLastName:  lastName,
+    CustAddress:   address,
+    CustCity:      city,
+    CustProv:      prov,
+    CustPostal:    postal,
+    CustCountry:   country,
     CustHomePhone: homePhone,
-    CustBusPhone: busPhone,
-    CustUserId: userid,
-    CustPsswd: psswd,
-    CustEmail: email,
+    CustBusPhone:  busPhone,
+    CustUserId:    userid,
+    CustPsswd:     psswd,
+    CustEmail:     email,
   
 };
 // create a new customer into DB

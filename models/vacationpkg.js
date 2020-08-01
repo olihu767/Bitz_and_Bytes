@@ -1,15 +1,16 @@
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
+const PackagesSchema = new mongoose.Schema(
+  {
+    id:                   Number,
+    PackageId:            Number,
+    PkgName:              String,
+    PkgStartDate:         Number,
+    PkgEndDate:           Number,
+    PkgDesc:              String,
+    PkgBasePrice:         Number,
+    PkgAgencyCommission:  Number
+  }
+);
 
-// const gallerySchema = new mongoose.Schema(
-//   {
-//     id:           Number,
-//     title:        String,
-//     url:          String,
-//     filename:     String,
-//     place:        String,
-//     text:         String
-//   }
-// );
-
-// module.exports = mongoose.model('Vacationpkg', gallerySchema);
+module.exports = mongoose.model('Packages', packagesSchema);
