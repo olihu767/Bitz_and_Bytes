@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to <%= title %>!</title>
+  <%- include('./partials/css-global'); %>
+</head>
+
+<%- include('./partials/header_gal.ejs'); %>
+
+<body>
+  
+  <header class="full-vh center-items">
+    <figure id=figure_text>
+        <figcaption>Welcome to <%= place %>!</figcaption>
+        <img src="http://picsum.photos/id/<%= id %>/400" alt="<%= title %>">
+        <p><%= text %>!</p>
+  </header> 
+
+
+<%- include('./partials/js-gallery'); %>
+<%- include('./partials/js-scroll'); %>
+
+</body>
+
+<%- include('./partials/foot'); %>
+
+</html>
+
+
+
