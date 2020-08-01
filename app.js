@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 // automatically check if requested file is found in /public. If yes, return that file as a response to the browser
 app.use(express.static(path.join(__dirname, 'public')));
 
-const Customer = require("./models/customers.js");
+const customer = require("./models/customers.js");
 
 const mongoDB = process.env.MONGODB_URL;
 
