@@ -12,8 +12,8 @@ const CustomerSchema = new mongoose.Schema(
     CustHomePhone: String,
     CustBusPhone:  String,
     CustEmail:     String,
-    CustUserid:    String,
-    CustPsswd:     String
+    userid:        String,
+    passwd:        String
   }
 );
 

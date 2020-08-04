@@ -1,83 +1,92 @@
-   /* ---------------- */
+  /* ---------------- */
   /*   TOPOGRAPHY     */
  /* ---------------- */
 
-@import url('https://fonts.googleapis.com/css2?family=Kurale&family=Raleway:ital,wght@0,100;0,200;0,500;0,700;1,100;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Karla&family=Raleway:wght@300;400&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
-
-   /* ------------------------- */
-  /* HEADER and LOGO CONTAINER */
- /* ------------------------- */
-
-
-/* Style the header with a blue background and some padding */
-
-#navbar {
-  /* overflow: hidden; */
-  background-image: url("https://picsum.photos/id/10/2000/2000");   
-  padding: 15px 0; 
-  transition: 0.3s; /* Adds a transition effect when the padding is decreased */
-  position: fixed; /* Sticky/fixed navbar */
-  width: 100%;
-  top: 0; /* At the top */
+ @import url('https://fonts.googleapis.com/css2?family=Kurale&family=Raleway:ital,wght@0,100;0,200;0,500;0,700;1,100;1,900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Karla&family=Raleway:wght@300;400&display=swap');
+ @import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
+ 
+    /* ------------------------- */
+   /* HEADER and LOGO CONTAINER */
+  /* ------------------------- */
+ 
+ /* Create and adjust header container */
+.header_container {
+  display: flex;    
+  flex-wrap: wrap;
+  margin: 0; 
+  align-items: center;
+  background-image: url("https://picsum.photos/id/10/1000/1000");   
+  background-size: cover;
 }
-
-
-/* Style the header links */
-#navbar a {
-  float: left;
-  color: black;
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 4px;
-}
-
-/* Change the background color on mouse-over */
-#navbar a:hover {
-  background-color: #e0e4;
-  color: black;
-  opacity: 0.6; 
-}
-
-#navbar a.highlight {
-  background-color: #e0e4;
-  color: black;
-}
-
-/* Float the link section to the right */
-
-#navbar-right {
-  float: right;
-}
-
-#navbar-right a {
-  font-family: "Allura", sans-serif; 
-  font-size: 25px;
-}
-
-/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-@media screen and (max-width: 500px) {
-  #navbar a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  #navbar-right {
-    float: none;
+ 
+ /* Adjust header parameters inside the container */
+header_container h1 {
+  margin: 0; 
+  padding: 0.15em;   
+  font-variant: small-caps; 
+  font-size: 10px; 
+  color: black; 
+  font-family: "Kurale", sans-serif; 
+} 
     
-  }
+ 
+    /* ---------- */
+   /* NAVIGATION */
+  /* ---------- */
+ 
+ /* Locate navigation menue at the top right corner for the LOGIN page */
+  
+.nav {
+  font-family: "Allura", sans-serif; 
+  font-size: 20px;
+  position: absolute;
+  top: 15px;
+  right: 0px;
+  text-align: center;
+  padding: 20px;   
 }
+ 
+nav ul {
+  display: none; 
+  list-style: none;
+  margin: 0;
+}
+ 
+nav li {
+  list-style: none;
+  text-decoration: none;
+}
+ 
+nav a {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  margin-right: 30px; 
+}
+ 
+ /* Highlight Login tab */
+ 
+.nav a:hover {
+  background-color: white;
+  color: black;
+}
+ 
+.nav li.highlight {
+  background-color: #e0eeee;
+  color: white;
+  float: left; 
+  height: 25px; 
+} 
+ 
 
-  /* ------------ */
- /* HERO SECTION */
-/*------------  */
 
-/* Hero section image */
-
+   /* ------------ */
+  /* HERO SECTION */
+ /*------------  */
+ 
+ /* Hero section image */
+ 
 body {
   margin: 0;  
   background-image: url("https://picsum.photos/id/179/2000/2000"); 
@@ -88,15 +97,15 @@ body {
   justify-content: center;
   padding: 0;    
 }
-
- main {
+ 
+main {
   display: flex;
   justify-content: center;
   align-items: center;
 } 
-
-/* Adjust header container in the middle of Hero section */ 
-
+ 
+ /* Adjust header container in the middle of Hero section */ 
+ 
 .h2 { 
   padding: 0;     
   font-variant: small-caps;   
@@ -104,7 +113,7 @@ body {
   text-align: center; 
   margin: 50px 0;   
 } 
-
+ 
 .h3 { 
   padding: 10px;    
   font-variant: small-caps;   
@@ -112,7 +121,7 @@ body {
   text-align: center; 
   margin: 100px 0;  
 } 
-
+ 
 .button-sign-up {
   padding: 1em 1em;
   background-image: url("https://picsum.photos/id/443/300/300");   
@@ -126,32 +135,32 @@ body {
   font-weight: bold;
   font-size: 18px;
 } 
-
+ 
 .button-sign-up:hover {
   background-image: linear-gradient(rebeccapurple, lightblue);
 }
-
+ 
 .required:after {
   content:" *";
   color: red;
 }
-
+ 
 input:focus:invalid  {
   background-color: rgba(241, 41, 41, 0.64);
   border: 0px;
   transition: background-color 300ms;
 }
-
+ 
 input:focus:valid {
   background-color: rgba(56, 233, 21, 0.64);
   transition: background-color 300ms;
 }
-
-
-  /*----------------*/
- /*     PAGE 404   */
-/*----------------*/
-
+ 
+ 
+   /*----------------*/
+  /*     PAGE 404   */
+ /*----------------*/
+ 
 .page404 {
   display: flex;
   flex-wrap: wrap;  
@@ -163,25 +172,24 @@ input:focus:valid {
   color:blue;
   font-family: "Kurale", sans-serif;
 }
-
-
-  /*----------------*/
- /* GALLERY SECTION*/
-/*----------------*/
-
+ 
+ 
+   /*----------------*/
+  /* GALLERY SECTION*/
+ /*----------------*/
+ 
 .gallery {
   display: flex;
   flex-wrap: wrap;  
   justify-content: center;
   margin: auto;
 }
-
+ 
 .gallery img {
-  /* padding-top: 10px;  */
   padding-right: 30px;
   padding-left: 30px; 
 }
-
+ 
 .gallery figure {
   Color: black;
   padding-top: 50px;
@@ -191,23 +199,23 @@ input:focus:valid {
   font-size: 22px;
   background-image: url("https://picsum.photos/id/344/750/750");  
   border-radius: 8px;
-  }
-
-  .gallery figure:hover {
-    background-image: linear-gradient(rgb(178, 233, 236), lightblue);
-  }
-
- .center-items {
+}
+ 
+.gallery figure:hover {
+  background-image: linear-gradient(rgb(178, 233, 236), lightblue);
+}
+ 
+.center-items {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-
+ 
 .full-vh {
   min-height: 100vh;
 }
-
+ 
 #figure_text {
   flex-wrap: wrap;
   text-align: center;
@@ -216,7 +224,7 @@ input:focus:valid {
   margin: 100px 0;  
   border-radius: 8px; 
 } 
-
+ 
 #figure_text p {
   flex-wrap: wrap;
   background-image: url("https://picsum.photos/id/344/2000/2000");   
@@ -225,19 +233,19 @@ input:focus:valid {
   border-radius: 10px;
   font-family: "Kurale", sans-serif;
 } 
-
-
+ 
+ 
 #figure_text img {
   border-radius: 15px;
   border: 1px solid black;
   color: black;
 }  
-
-
+ 
+ 
+  /*----------------------*/
+  /* CONTACT FORM SECTION */
  /*----------------------*/
- /* CONTACT FORM SECTION */
-/*----------------------*/
-
+ 
 form {
   display: flex;
   flex-wrap: wrap; 
@@ -246,15 +254,15 @@ form {
   margin-bottom: 15px;
   font-size: 30px; 
 }
-
-
+ 
+ 
 label {
   text-align: left; 
   font-size: 20px; 
   font-family: "Kurale", sans-serif; 
 }
-
-
+ 
+ 
 input[type=text], select, textarea {
   width: 100%; 
   padding: 12px; 
@@ -262,7 +270,7 @@ input[type=text], select, textarea {
   margin-bottom: 10px;   
   resize:vertical; 
 }
-
+ 
 /* Style the submit button with a specific background color etc */
 input[type=text], input[type=email] {
   width: 100%;
@@ -272,56 +280,56 @@ input[type=text], input[type=email] {
   border: 2px solid #ccc; 
   box-sizing: border-box; 
 }
-
+ 
 input[type=submit] {
   font-size: 40px; 
   border-radius: 5px;
   border: 2px solid rgb(49, 51, 51); 
   font-family: "Allura", sans-serif;  
 }
-
-
+ 
+ 
 /* When moving the mouse over the submit button, add a brighter color */
-input[type=submit]:hover {
-  background-color: #5d53e7;
-}
-
-/* Add a background color and some padding around the form */
+ input[type=submit]:hover {
+   background-color: #5d53e7;
+ }
+ 
+ /* Add a background color and some padding around the form */
 .container_contact {
   border-radius: 5px;
   background-image: url("https://picsum.photos/id/124/1000/1000"); 
   padding: 0 ;
   width: 500px; 
   margin: 100px 0;  
-  }
-
+}
+ 
 .container_contact h3 {
   text-align: center;
   font-size: 40px;
   font-family: "Karla", sans-serif;  
 }
-
+ 
 .required:after {
   content:" *";
   color: red;
 }
-
+ 
 input:focus:invalid  {
   background-color:red;
   border: 0px;
   transition: background-color 300ms;
 }
-
+ 
 input:focus:valid {
   background-color: rgba(56, 233, 21, 0.64);
   transition: background-color 300ms;
 }
-
-   /* -------------- */
- /* FOOTER SECTION */
-/* -------------- */
-
-/* Footer Section settings */
+ 
+    /* -------------- */
+  /* FOOTER SECTION */
+ /* -------------- */
+ 
+ /* Footer Section settings */
 footer {
   position: fixed;
   left: 0;
@@ -333,4 +341,36 @@ footer {
   text-align: center;
   padding: 0.5em 0.5em;
   font-family: "Kurale", sans-serif; 
+}
+
+/*---------------------------*/
+/* ------ Menu Toggle ------ */
+/*---------------------------*/
+nav ul {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+@media (orientation: landscape) {
+  /* Applies these styles when the screen is in horizontal nav on desktop */
+  nav ul {
+    display: flex; 
+  }
+
+  h4 {
+    padding: 10px;
+  }
+
+  nav ul li {
+   /* Gallery items will grow to fill any empty space equally. */
+    flex: auto;
+  }
+
+  /* Don't show the menu on desktop */
+  nav button {
+    display: none;
+  }
 }

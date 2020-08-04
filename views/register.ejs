@@ -1,53 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Experts Register Page</title>
-  
-  <%- include('./partials/css-global'); %>
-  
-</head>
-
-  <%- include('./partials/header_reg.ejs'); %>
+<%- include('./partials/head'); %> 
+<%- include('./partials/css-global'); %>
+<%- include('./partials/header'); %>
 
  <body class="sky"> 
    <main class="register_form">
-     <form action="#" method="post">
+     <form action="/customers" method="post">
        <div class="container_register">
          <h2 id="register">Registration Page</h2>
-         <div>
-           <label for="name_input" class="required">Full Name</label>
-           <input type="text" name="name" id="name_input" maxlength="25" class="register_box" placeholder="Enter your full name" required>
-            <div>
-               <label for="email_input" class="required">Email Address</label>
-               <input type="email" name="email" id="email_input" maxlength="25" class="register_box" placeholder="Enter your email address" required>
-               <div>
-                 <label for="pass_input" class="required">Password</label>
-                 <input type="password" name="password" id="pass_input" minlength="8" class="register_box" placeholder="Enter your password" required>
-                 <div>
-                   <label for="pass_confirm" class="required">Confirm Password</label>
-                   <input type="password" name="pass_confirm" id="pass_confirm" minlength="8" class="register_box" placeholder="Confirm your password" required>
-                   <div class="subscribe">
-                     <input type="submit" value="Register" id="form_submit">
-                     <div> 
-                     <input type="checkbox"
-                      name="Subscribe" id="form_checkup"> Subscribe to Our Newsletter
-                     </div>
-                     </div>
-                   </div>
-                 </div>
-              </div>
-            </div>
-          </div>
-      </form>
-    </main>
-    
-    <%- include('./partials/js-gallery'); %>
-    <%- include('./partials/js-scroll'); %>
-    
-    </body>
-    
-    <%- include('./partials/foot'); %>
-    
-    </html>
+          <input type = "text" placeholder = "Enter First Name" name = "firstName" required>
+          <input type = "text" placeholder = "Enter Last Name" name = "lastName" required>
+          <input type = "text" placeholder = "Enter Street Address" name = "address" required>
+          <input type = "text" placeholder = "Enter City" name = "city" required>
+          <input type = "text" placeholder = "Enter Province" name = "prov" required>
+          <input type = "text" placeholder = "Enter Postal Code" name = "postal" required>
+          <input type = "text" placeholder = "Enter Home Phone Number" name = "homePhone" required>
+          <input type = "text" placeholder = "Enter Business Phone Number" name = "busPhone" required>
+          <input type = "email" placeholder = "Enter your email address" name="email" required>
+          <input type = "text" placeholder = "Create a User Name" name = "userid" required>
+          <input type = "password" placeholder= "Enter a Password" name = "passwd" minlength="8" required>
+          <button>Submit!</button>
+      </div>
+     </form>
+   </main>
+  </body>
+  <%- include('./partials/js-global'); %>
+  <%- include('./partials/footer'); %>
+  

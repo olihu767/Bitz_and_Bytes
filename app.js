@@ -9,14 +9,21 @@ const today      = moment();
 const bodyParser = require('body-parser');
 
 // create express app
-const app = express();
+const app        = express();
 app.set('view engine', 'ejs');
 
 // automatically check if requested file is found in /public. If yes, return that file as a response to the browser
 app.use(express.static(path.join(__dirname, 'public')));
 
-const customer = require("./models/customers.js");
+// Models
+const Customer   = require("./models/customers.js");
+const Bookings   = require("./models/bookings.js");
+const Packages   = require("./models/packages.js");
+const Agencies   = require("./models/agencies.js");
+const Agents     = require("./models/agents.js");
+const Comments   = require("./models/comments.js")
 
+// MongoDB connection
 const mongoDB = process.env.MONGODB_URL;
 
 mongoose.connect(mongoDB, { useUnifiedTopology: true,useNewUrlParser: true });
@@ -33,39 +40,75 @@ db.once('open', function() {
 
 app.use(bodyParser.urlencoded ({extended:true}));
 
-// Define an endpoint handlers for the home page to render 
+// Define an endpoint handler for the home page to render
 app.get('/', function(request, response){
-  response.render('index',{});
+  response.render('index', {title: "Home"});
 });
 
 app.get('/login', function(request, response){
-  response.render('login',{});
+  response.render('login', {title: "Login"});
 });
 
 app.get('/register', function(request, response){
-  response.render('register',{});
+  response.render('register', {title: "Register"});
 });
 
-app.get('/gallery', function(request, response){
-  response.render('gallery',{});
+app.get('/packages', function(request, response){
+  response.render('packages', {title: "Packages"});
+});
+
+app.get('/agencies', function(request, response){
+  response.render('agencies', {title: "Contact Info"});
+});
+
+app.get('/bookings', function(request, response){
+  response.render('bookings', {title: "Booking"});
+});
+
+app.get('/thankyou', function(request, response){
+  response.render('thankyou', {title: "Thank You"});
+});
+
+app.get('/registered', function(request, response){
+  response.render('registered', {title: "Registration Complete"});
 });
 
 
-app.post ("/", function(req, res){
+app.get('/packages/:id', function(request, response,){
 
-  const firstName = req.body.firstName;
-  const lastName =  req.body.lastName;
-  const address =   req.body.address;
-  const city =      req.body.city;
-  const prov =      req.body.prov;
-  const postal =    req.body.postal;
-  const country =   req.body.country;
-  const homePhone = req.body.homePhone;
-  const busPhone =  req.body.busPhone;
-  const userid =    req.body.userid;
-  const pswwd =     req.body.psswd;
-  const email =     req.body.email;
-  
+// .findOne returns the first object it finds //
+Packages.findOne({'imgId': request.params.id}, function(error, packages) {
+  // Check for IDs that are not in the list //
+  if (!packages) {
+    return response.send('Sorry Invalid ID.');
+  }
+  // Compile view and respond //
+  response.render('packages',packages);
+  });
+});
+
+// This is the endpoint that the ****************
+app.get('/api/packages', function(request, response,){
+  Packages.find(function(error, packages) { 
+    response.json(packages);
+  });
+});
+
+// Adds customer registration info into Mongo database
+app.post ("/customers", function(req, res){
+
+  const firstName      = req.body.firstName;
+  const lastName       = req.body.lastName;
+  const address        = req.body.address;
+  const city           = req.body.city;
+  const prov           = req.body.prov;
+  const postal         = req.body.postal;
+  const country        = req.body.country;
+  const homePhone      = req.body.homePhone;
+  const busPhone       = req.body.busPhone;
+  const email          = req.body.email;
+  const userid         = req.body.userid;
+  const passwd         = req.body.passwd;
   const newCustomer = {
     CustFirstName: firstName,
     CustLastName:  lastName,
@@ -76,63 +119,120 @@ app.post ("/", function(req, res){
     CustCountry:   country,
     CustHomePhone: homePhone,
     CustBusPhone:  busPhone,
-    CustUserId:    userid,
-    CustPsswd:     psswd,
     CustEmail:     email,
-  
-};
-// create a new customer into DB
-Customer.create(newCustomer, function(err, newlyCreated){
-  if (err){
-    console.log(err)
-  } else {
-    console.log(newCustomer)
-    res.redirect("/")
+    userid:        userid,
+    passwd:        passwd,
+    }
+
+  Customer.create(newCustomer, function(err, newlyCreated){
+    if (err){
+      console.log(err)
+    } else {
+        console.log(newCustomer)
+          res.redirect("/registered")
+    }
+  });
+});
+
+
+app.post ("/bookings", function(req, res){
+  const bookingDate    = req.body.bookingDate;
+  const firstName      = req.body.firstName;
+  const lastName       = req.body.lastName;
+  const homePhone      = req.body.homePhone;
+  const busPhone       = req.body.busPhone;
+  const travelerCount  = req.body.travelerCount;
+  const newBookings = { 
+    BookingDate:   bookingDate,   
+    CustFirstName: firstName,
+    CustLastName:  lastName,           
+    CustHomePhone: homePhone,
+    CustBusPhone:  busPhone,       
+    TravelerCount: travelerCount,   
   }
-})
+
+  Bookings.create(newBookings, function(err, newlyCreated){
+    if (err){
+      console.log(err)
+    } else {
+        console.log(newBookings)
+          res.redirect("/thankyou")
+    }
+  }); 
 });
-  
-// app.get("/order/package", function(req,res){
-//   res.render("order.ejs")
-// });
+
+app.post ("/comments", function(req, res){
+  const custName      = req.body.custName;
+  const custEmail     = req.body.custEmail;
+  const custComments  = req.body.custComments;
+  const newComments = { 
+    CustName:     custName,
+    CustEmail:    custEmail,           
+    CustComments: custComments,
+  }
+
+  Comments.create(newComments, function(err, newlyCreated){
+    if (err){
+      console.log(err)
+    } else {
+        console.log(newComments)
+          res.redirect("/")
+    }
+  }); 
+});
 
 
-// .findOne returns the first object it finds //
-// Destinations.findOne({'id': request.params.id}, function(error, destinations) {
+app.get('/:id', function(request, response,){
+
+Agencies.findOne({'id': request.params.id}, function(error, agencies) {
   // Check for IDs that are not in the list //
-  // if (!destinations) {
-  //   return response.send('Sorry Invalid ID.');
-  // }
+  if (!agencies) {
+    return response.send('Sorry Invalid ID.');
+  }
   // Compile view and respond //
-//   response.render('destinations',destinations);
-//   });
-// });
-
-// This is the endpoint that the frontend gallery script calls //
-// app.get('/api/destinations', function(request, response,){
-
-// Destinations.find(function(error, destinations) { 
-//   response.json(destinations);
-//   });
-// });
-
-
-
-
-
-
-
-// add current year using moment module
-const yearFormat="YYYY"
-  app.locals.moment = moment;
-  app.locals.yearFormat = yearFormat;
-
-// start up server
-const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, function(){
-  console.log(`Listening on port ${PORT}`);
+  response.render('agencies', agencies);
+  });
 });
 
+// This is the endpoint that the ****************
+app.get('/api/agencies', function(request, response,){
+  Agencies.find(function(error, agencies) { 
+    response.json(agencies);
+  });
+});
 
+app.get('/:id', function(request, response,){
+
+  Agents.findOne({'id': request.params.id}, function(error, agents) {
+    // Check for IDs that are not in the list //
+    if (!agents) {
+      return response.send('Sorry Invalid ID.');
+    }
+    // Compile view and respond //
+    response.render('agents', agents);
+    });
+  });
+  
+  // This is the endpoint that the ****************
+  app.get('/api/agents', function(request, response,){
+    Agents.find(function(error, agents) { 
+      response.json(agents);
+    });
+  });
+
+/// necessary for 4 digit year in footer //
+app.locals.moment = moment;
+
+
+// If no file or endpoint found, send a response to the 404 page //
+app.use(function(req, res, next) {
+  res.status(404);
+    res.render('404', {title: "404"});
+});
+
+// Start up server //
+const PORT = process.env.PORT || 3000;
+  app.listen(PORT, function(){
+    console.log(`Listening on port ${PORT}`);
+});
 

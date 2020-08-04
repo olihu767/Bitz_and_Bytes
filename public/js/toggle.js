@@ -1,8 +1,8 @@
  // Declare our element variables
- const button = document.querySelector('.menu_btn');
+ const button = document.querySelector('.btn');
  const menu = document.querySelector('nav ul');
 
- // function statement
+ // Define the function that will 
  function eventHandler() {
    // console.log('Menu is toggled');
 

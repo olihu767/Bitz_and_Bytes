@@ -3,17 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/login.css">
-  <link rel="stylesheet" href="/css/register.css">
-  <title>Travel Experts Error 404 Page Not Found</title>
+  <!-- 404 page must use these links, partial css will not work on an error page-->
+  <link rel="stylesheet" type="text/css" href="/css/main.css"> 
+  <title>Travel Experts-404 Page Not Found</title>
 </head>
-  <%- include('./partials/header.ejs'); %>
 <body>
-  <div class="page404">
-    <h1><%= page %> Error! Page Not Found!</h1>
-  </div>
-  <%- include('./partials/js-toggle'); %>  
-</body>
-  <%- include('./partials/foot'); %>
-</html> 
+<%- include('./partials/header'); %>
+<h2 class= "page404"><%=title%>Error! Page Not Found.</h2>
+<%- include('./partials/js-global'); %>
+<%- include('./partials/footer'); %>
+</body> 
+</html>
+

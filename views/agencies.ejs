@@ -1,0 +1,30 @@
+<%- include('./partials/css-global'); %>
+<%- include('./partials/head'); %> 
+<%- include('./partials/header'); %>
+
+ <!-- make a body class for css or use main class? -->
+<body>
+<section class="agencies"></section>
+<aside class="agents"></aside>
+  
+  <main class="contactform">
+  <div class="container_contact">
+  <h3 id="contactform">Contact Form</h3>
+  <form action="/comments" method="post">
+  <label for="custName" class="required">Name</label>
+  <input type="text" name="custName" placeholder="Your name.." required>
+  <label for="custEmail" class="required">Email Address</label>
+  <input type="email" name="custEmail" id="email_input" placeholder="Enter your email address" required>       
+  <label for="custComments" class="required">Message</label>
+  <textarea id="subject" name="custComments" placeholder="Your message.." style="height:100px" required></textarea>
+  <input type="submit" value="Submit"> 
+  </form>
+  </div>
+  </main>
+</body>
+<%- include('./partials/js-global'); %>
+<%- include('./partials/footer'); %>
+
+
+
+

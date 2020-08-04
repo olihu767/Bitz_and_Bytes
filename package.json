@@ -2,7 +2,7 @@
   "name": "Bitz_and_Bytes",
   "version": "1.0.0",
   "description": "",
-  "main": "_build.js",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -27,6 +27,6 @@
     "express": "^4.17.1",
     "moment": "^2.27.0",
     "mongodb": "^3.6.0",
-    "mongoose": "^5.9.26"
+    "mongoose": "^5.9.27"
   }
 }
