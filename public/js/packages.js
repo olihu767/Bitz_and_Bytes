@@ -24,7 +24,7 @@
           <li>Promotion Start Date: ${item.PkgStartDate}</li>
           <li>Promotion End Date: ${item.PkgEndDate}</li>
           <li>Book today starting from only${item.PkgBasePrice}!CAD</li>
-          <button><a href = "/bookings">Book Now!</a></button>
+          <button><a href = "/${item.PkgPage}">Book Now!</a></button>
         </ul>
         </figure>`;
 });

@@ -1,0 +1,18 @@
+<%- include('./partials/css-global'); %>
+<%- include('./partials/head'); %> 
+<%- include('./partials/header'); %>
+  
+<body class="bookings">
+<form action="/bookings" method="post">
+<h2 id="bookings">Please complete form to book our Asian Expedition Package</h2>
+<label for="bookingDate">Booking Date:</label>
+<input type = "date" placeholder = <%= moment().format('YYYY-MM-DD')%> name = "bookingDate">
+<input type = "text" placeholder = "Enter First Name" name = "firstName" required>
+<input type = "text" placeholder = "Enter Last Name" name = "lastName" required>
+<input type = "text" placeholder = "Enter Home Phone Number" name = "homePhone" required>
+<input type = "text" placeholder = "Enter Business Phone Number" name = "busPhone" required>
+<input type = "text" placeholder = "Enter number of Travelers" name = "travelerCount" required>
+<button>Submit Your Booking</button>
+</body>
+<%- include('./partials/js-global'); %>
+<%- include('./partials/footer'); %>

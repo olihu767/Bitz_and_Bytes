@@ -49,6 +49,22 @@ app.get('/login', function(request, response){
   response.render('login', {title: "Login"});
 });
 
+app.get('/asia', function(request, response){
+  response.render('bookings', {title: "Asian Expedition"});
+});
+
+app.get('/europe', function(request, response){
+  response.render('bookings', {title: "European Vacation"});
+});
+
+app.get('/caribbean', function(request, response){
+  response.render('bookings', {title: "Caribbean New Year"});
+});
+
+app.get('/polynesia', function(request, response){
+  response.render('bookings', {title: "Polynesian Paradise"});
+});
+
 app.get('/register', function(request, response){
   response.render('register', {title: "Register"});
 });

@@ -9,7 +9,8 @@ const packagesSchema = new mongoose.Schema(
     PkgDesc:              String,
     PkgBasePrice:         Number,
     PkgAgencyCommission:  Number,
-    imgId:                String
+    imgId:                String,
+    PkgPage:              String
   }
 );
 
