@@ -50,19 +50,19 @@ app.get('/login', function(request, response){
 });
 
 app.get('/asia', function(request, response){
-  response.render('bookings', {title: "Asian Expedition"});
+  response.render('asia', {title: "Asian Expedition"});
 });
 
 app.get('/europe', function(request, response){
-  response.render('bookings', {title: "European Vacation"});
+  response.render('europe', {title: "European Vacation"});
 });
 
 app.get('/caribbean', function(request, response){
-  response.render('bookings', {title: "Caribbean New Year"});
+  response.render('caribbean', {title: "Caribbean New Year"});
 });
 
 app.get('/polynesia', function(request, response){
-  response.render('bookings', {title: "Polynesian Paradise"});
+  response.render('polynesia', {title: "Polynesian Paradise"});
 });
 
 app.get('/register', function(request, response){
