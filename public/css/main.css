@@ -26,7 +26,7 @@
 /* Style the header links */
 #navbar a {
   float: left;
-  color: black;
+  color: white;
   text-align: center;
   padding: 12px;
   text-decoration: none;
@@ -37,8 +37,8 @@
 
 /* Change the background color on mouse-over */
 #navbar a:hover {
-  background-color: #e0e4;
-  color: black;
+  background-color: #0c0b0b;
+  color: white;
   opacity: 0.6; 
 }
 
@@ -55,8 +55,9 @@
 }
 
 #navbar-right a {
-  font-family: "Allura", sans-serif; 
-  font-size: 25px;
+  /* font-family: "Rototo", sans-serif;   */
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 20px;
 }
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
@@ -94,7 +95,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 100px;  
+  margin-bottom: 800px;  
   margin-top: 100px;  
 } 
  
@@ -106,8 +107,8 @@ main {
   font-size: 30px; 
   text-align: center; 
   /* margin: 100px 0;  */
-  margin-bottom: 250px;  
-  margin-top: 250px;  
+  margin-bottom: 100px;  
+  margin-top: 10px;  
 } 
  
 .h2 { 
