@@ -99,33 +99,4 @@ input:focus:valid {
   transition: background-color 300ms;
 }
 
-.agencies {
-  margin-top: 200px;
-  margin-left: 100px;
-  border-radius: 5px;
-  border: 2px solid rgb(49, 51, 51);
-  float: left; 
-  background-color: coral;
-} 
 
-.agents {
-  margin-top: 200px;
-  margin-right: 100px;
-  border-radius: 5px;
-  border: 2px solid rgb(49, 51, 51); 
-  float: right; 
-  list-style: none;
-  background-color: coral;
-}
- 
-.agencies ul {
-  list-style: none;
-  font-size: 15px;
-  background-color: turquoise;
-}
-.agents ul {
-  list-style: none;
-  font-size: 15px;
-  background-color: turquoise;
-}
- 
