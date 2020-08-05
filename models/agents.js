@@ -5,8 +5,9 @@ const AgentsSchema = new mongoose.Schema(
     AgentId:     Number,
     AgtFirstName: String,
     AgtLastName:  String,
-    AgtBusphone:  String,
+    AgtBusPhone:  String,
     AgtEmail:     String,
+    AgtPosition:  String,
     AgencyId:     Number,
   }
 );

@@ -22,6 +22,7 @@ const Packages   = require("./models/packages.js");
 const Agencies   = require("./models/agencies.js");
 const Agents     = require("./models/agents.js");
 const Comments   = require("./models/comments.js")
+const { forEach } = require('async');
 
 // MongoDB connection
 const mongoDB = process.env.MONGODB_URL;
@@ -73,9 +74,14 @@ app.get('/packages', function(request, response){
   response.render('packages', {title: "Packages"});
 });
 
-app.get('/agencies', function(request, response){
-  response.render('agencies', {title: "Contact Info"});
-});
+app.get('/agencies', function (request, response) {
+  Agencies.find(function (error, agencies) {
+    Agents.find(function (error, agents) {
+      data = { agencies_data: agencies, agents_data: agents }
+      response.render('agencies', { page_data: data, title:  "Contact Us" });
+    })
+  });
+})
 
 app.get('/bookings', function(request, response){
   response.render('bookings', {title: "Booking"});
@@ -88,44 +94,6 @@ app.get('/thankyou', function(request, response){
 app.get('/registered', function(request, response){
   response.render('registered', {title: "Registration Complete"});
 });
-
-app.get('/agencies/:id', function(request, response,){
-
-  Agencies.findOne({'id': request.params.id}, function(error, agencies) {
-    // Check for IDs that are not in the list //
-    if (!agencies) {
-      return response.send('Sorry Invalid ID.');
-    }
-    // Compile view and respond //
-    response.render('agencies', agencies);
-    });
-  });
-  
-  // This is the endpoint that the ****************
-  app.get('/api/agencies', function(request, response,){
-    Agencies.find(function(error, agencies) { 
-      response.json(agencies);
-    });
-  });
-  
-  app.get('/agents/:id', function(request, response,){
-  
-    Agents.findOne({'id': request.params.id}, function(error, agents) {
-      // Check for IDs that are not in the list //
-      if (!agents) {
-        return response.send('Sorry Invalid ID.');
-      }
-      // Compile view and respond //
-      response.render('agents', agents);
-      });
-    });
-    
-    // This is the endpoint that the ****************
-    app.get('/api/agents', function(request, response,){
-      Agents.find(function(error, agents) { 
-        response.json(agents);
-      });
-    });
 
 app.get('/packages/:id', function(request, response,){
 

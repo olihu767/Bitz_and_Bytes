@@ -1,4 +1,4 @@
-// Fetch the data from the packages database in MongoDB
+/// Fetch the data from the packages database in MongoDB
 
 fetch('http://localhost:3000/api/agencies') 
 
@@ -28,6 +28,7 @@ fetch('http://localhost:3000/api/agencies')
             <li>Fax:${item.AgncyFax}</li>      
          </ul>
         </figure>`;
+        // console.log(item);
   
     agencies.innerHTML = agenciesTemplate;  
     });
