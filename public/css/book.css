@@ -1,10 +1,10 @@
-  /* ------------------ */
- /* REGISTER CONTAINER */
+    /* ------------------ */
+ /* BOOKING CONTAINER */
 /* ------------------ */
 
-/* Adjust register container  */ 
+/* Adjust container  */ 
 
-.container_register {
+.container_book {
   padding: 20px 20px ; 
   background-color: #d17db8; 
   border-radius: 7px;   
@@ -13,24 +13,28 @@
   margin: auto; 
 }
 
-/* Adjust register header */ 
-
-.container_register h2 { 
-  font-size: 35px; 
+/* Adjust header */ 
+.container_book h2 { 
+  font-size: 25px; 
   text-align: center;  
 } 
 
 /* Add Lorem Picsum background  */ 
-.sky {
+
+.book {
   margin: 0; 
   background-image: url("https://picsum.photos/id/360/2000/2000");; 
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  justify-content: center;
+  padding: 0;    
 }
 
 /* Placement adjustments */
-input[type=email], input[type=text], input[type=password] {
+
+input[type=date], input[type=text] {
   width: 100%;
   padding: 15px;
   margin: 8px 0;  
@@ -57,14 +61,6 @@ input:focus:valid {
   transition: background-color 300ms;
 }
 
-.register_form {
-  align-self: flex-start; 
-  display: flex;
-  font-family: "Kurale", sans-serif; 
-  flex-wrap: wrap; 
-  justify-items: center; 
-  align-items: center;
-}
 
 button{
   width: 100%;
@@ -77,4 +73,3 @@ button{
   font-size: 30px;
 
 }
-

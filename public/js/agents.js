@@ -16,6 +16,7 @@ fetch('http://localhost:3000/api/agents')
       agentsTemplate += 
         `<figure>
         <ul>
+        <legend>Travel Agent:</legend>
           <li>${item.AgtFirstName}</li>   
           <li>${item.AgtLastName}</li>
           <li>Office:${item.AgtBusPhone}</li> 
@@ -25,3 +26,4 @@ fetch('http://localhost:3000/api/agents')
 });
     agents.innerHTML = agentsTemplate;  
 });
+

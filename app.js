@@ -7,7 +7,7 @@ const cors       = require('cors');
 const moment     = require('moment'); 
 const today      = moment();
 const bodyParser = require('body-parser');
-
+const { forEach } = require('async');
 // create express app
 const app        = express();
 app.set('view engine', 'ejs');

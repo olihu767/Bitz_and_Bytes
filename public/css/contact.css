@@ -1,0 +1,126 @@
+
+    /*----------------------*/
+   /*                      */
+  /* CONTACT FORM SECTION */
+ /*                      */
+/*----------------------*/
+
+.contact {
+  margin: 0; 
+  background-image: url("https://picsum.photos/id/125/2000/2000"); 
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Adjust contact container */
+.container_contact {
+  border-radius: 5px;
+  background-color: #d17db8; 
+  padding: 30px;
+  width: 40%; 
+  margin: auto; 
+}
+
+/* Adjust contact header */ 
+
+.container_contact h3 {
+  text-align: center;
+  font-size: 40px;
+  font-family: "Karla", sans-serif;  
+}
+
+/* Box placement adjustments */
+
+#name_input, #email_input, #text-input {
+  width: 100%;
+  padding: 15px;
+  margin: 8px 0;  
+  display: inline-block;  
+  border: 2px solid #ccc; 
+  box-sizing: border-box; 
+  font-size: 20px;
+  font-family: "Karla", sans-serif;  
+}
+ 
+ 
+input[type=text], select, textarea {
+  width: 100%; 
+  padding: 12px; 
+  margin-top: 6px; 
+  margin-bottom: 10px;   
+  resize:vertical; 
+}
+ 
+/* Style the submit button with a specific background color etc */
+
+ 
+button{
+  width: 100%;
+  background-color: #ce8d83; 
+  padding: 15px;
+  margin: 8px 0;  
+  display: inline-block;  
+  border: 2px solid #ccc; 
+  box-sizing: border-box; 
+  font-size: 30px;
+
+}
+  
+/* When moving the mouse over the submit button, add a brighter color */
+ input[type=submit]:hover {
+   background-color: #5d53e7;
+ }
+ 
+ .required {
+  float: left;
+  font-family: "Karla", sans-serif; 
+  font-size: 20px; 
+}
+ 
+.required:after {
+  content:" *";
+  color: red;
+}
+ 
+input:focus:invalid  {
+  background-color:red;
+  border: 0px;
+  transition: background-color 300ms;
+}
+ 
+input:focus:valid {
+  background-color: rgba(56, 233, 21, 0.64);
+  transition: background-color 300ms;
+}
+
+.agencies {
+  margin-top: 200px;
+  margin-left: 100px;
+  border-radius: 5px;
+  border: 2px solid rgb(49, 51, 51);
+  float: left; 
+  background-color: coral;
+} 
+
+.agents {
+  margin-top: 200px;
+  margin-right: 100px;
+  border-radius: 5px;
+  border: 2px solid rgb(49, 51, 51); 
+  float: right; 
+  list-style: none;
+  background-color: coral;
+}
+ 
+.agencies ul {
+  list-style: none;
+  font-size: 15px;
+  background-color: turquoise;
+}
+.agents ul {
+  list-style: none;
+  font-size: 15px;
+  background-color: turquoise;
+}
+ 

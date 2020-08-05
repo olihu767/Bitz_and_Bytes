@@ -2,8 +2,9 @@
 <%- include('./partials/head'); %> 
 <%- include('./partials/header'); %>
   
-<body class="europe">
-<form action="/bookings" method="post">
+<body class="book">
+  <div class="container_book"></div>
+  <form class = "book_form"  action="/bookings" method="post">
 <h2 id="europe">Please complete form to book our European Vacation Package</h2>
 <label for="bookingDate">Booking Date:</label>
 <input type = "date" placeholder = <%= moment().format('YYYY-MM-DD')%> name = "bookingDate">

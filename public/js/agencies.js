@@ -18,6 +18,7 @@ fetch('http://localhost:3000/api/agencies')
       agenciesTemplate += 
         `<figure>
         <ul>
+          <legend>Agency:</legend>
           <li>${item.AgncyCity}</li>   
           <li>${item.AgncyAddress}</li>
           <li>${item.AgncyProv}</li> 
