@@ -8,7 +8,7 @@ fetch('http://localhost:3000/api/agencies')
   })
   .then(function(data) {
 
-   const agenciesList = data;
+    const agenciesList = data;
 
     let agenciesTemplate = ''; 
 
@@ -17,18 +17,19 @@ fetch('http://localhost:3000/api/agencies')
     agenciesList.forEach(function(item){
       agenciesTemplate += 
         `<figure>
-        <ul>
+          <ul>
           <legend>Agency:</legend>
-          <li>${item.AgncyCity}</li>   
-          <li>${item.AgncyAddress}</li>
-          <li>${item.AgncyProv}</li> 
-          <li>${item.AgncyPostal}</li>   
-          <li>${item.AgncyCountry}</li>  
-          <li>Office:${item.AgncyPhone}</li>    
-          <li>Fax:${item.AgncyFax}</li>      
-        </ul>
+            <li>${item.AgncyCity}</li>   
+            <li>${item.AgncyAddress}</li>
+            <li>${item.AgncyProv}</li> 
+            <li>${item.AgncyPostal}</li>   
+            <li>${item.AgncyCountry}</li>  
+            <li>Office:${item.AgncyPhone}</li>    
+            <li>Fax:${item.AgncyFax}</li>      
+         </ul>
         </figure>`;
-});
+  
     agencies.innerHTML = agenciesTemplate;  
+    });
 });
 
