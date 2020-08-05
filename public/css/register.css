@@ -5,7 +5,7 @@
 /* Adjust register container  */ 
 
 .container_register {
-  padding: 15px ; 
+  padding: 15px; 
   background-color: rgb(124, 110, 110); 
   border-radius: 2px;   
   box-shadow: 10px 10px 15px 2px rgb(173, 183, 230);  
@@ -13,6 +13,7 @@
   margin: auto; 
   font-size: 35px;
   font-family: "Kurale", sans-serif; 
+  
 }
 
 /* Adjust register header */ 
@@ -24,11 +25,12 @@
 
 /* Add Lorem Picsum background  */ 
 .sky {
-  margin: 0; 
+  /* margin: 0;  */
   background-image: url("../images/travel.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  max-height: 100px;
 }
 
 /* Placement adjustments */

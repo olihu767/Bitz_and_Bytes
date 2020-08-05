@@ -95,68 +95,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 800px;  
+  margin-bottom: 100px;  
   margin-top: 100px;  
 } 
  
-/* .packages {
-  display: flex;
-  flex-wrap: wrap;  
-  justify-content: center;
-  margin: auto;
-} */
-
-/* .packages img {
-  
-  padding-right: 30px;
-  padding-left: 30px; 
-} */
-
-
-/* .packages figure {
-  Color: black;
-  padding-top: 50px;
-  font-family: "Kurale", sans-serif;
-  text-align: center;
-  font-weight: bold;
-  font-size: 22px;
-  background-image: url("https://picsum.photos/id/344/750/750");  
-  border-radius: 8px;
-  }
-
-  .packages figure:hover {
-    background-image: linear-gradient(rgb(178, 233, 236), lightblue);
-  } */
-
-  #figure #text {
-    flex-wrap: wrap;
-    text-align: center;
-    font-size: 45px;
-    justify-content: center;
-    margin: 100px 0;  
-    border-radius: 8px; 
-  } 
-  
-  /* #figure_text p {
-    flex-wrap: wrap;
-    background-image: url("https://picsum.photos/id/344/2000/2000");   
-    text-align: justify;
-    font-size: 25px;
-    border-radius: 10px;
-    font-family: "Kurale", sans-serif;
-  }  */
-
-  /* #figure_text img {
-    border-radius: 15px;
-    border: 1px solid black;
-    color: black;
-  }  
-
-  #figure img{
-    background-image: url("https://picsum.photos/id/344/2000/2000");   
-  } */
-
-
  /* Adjust header container in the middle of Hero section */ 
 
 .h1 { 
@@ -248,26 +190,26 @@ footer{
   transition: 0.3s; /* Adds a transition effect when the padding is decreased */
   width: 100%;
   background-color: rgb(131, 23, 125);   ;
-  opacity: 0.8;  
+  opacity: 0.8;
 }
 
 
 .footer-distributed{
-	/* background-color: #292c2f;  */
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12); 
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
 	font: bold 16px sans-serif;
- 	 padding: 1px 10px; 
-	/* margin-top: 40px; */
+  padding: 10px 10px; 
+	
 }
  
 .footer-distributed .footer-left,
-.footer-distributed .footer-center,
+/* .footer-distributed .footer-center, */
 .footer-distributed .footer-right{
 	display: inline-block;
-	vertical-align: top;
+  vertical-align: top;
+  align-content: center;
 }
  
 .footer-distributed .footer-left{
