@@ -5,9 +5,10 @@
 /* Adjust container  */ 
 
 .container_book {
-  padding: 25px;
-  width: 50%; 
-  font-size: 35px;  
+  padding: 10px;
+  width: 30%; 
+  font-size: 35px;
+  font-family: "Kurale", sans-serif;  
   background-color: #4a2d8d; 
   border-radius: 7px;   
   box-shadow: 10px 10px 15px 2px lightblue;
@@ -42,7 +43,8 @@ input[type=date], input[type=text] {
   display: inline-block;  
   border: 2px solid #ccc; 
   box-sizing: border-box; 
-  font-size: 15px; 
+  font-size: 15px;
+  font-family: "Karla", sans-serif;   
 }
 
 /* add input required */
@@ -66,7 +68,7 @@ input:focus:valid {
 button{
   width: 100%;
   background-color: #ce8d83; 
-  padding: 15px;
+  padding: 25px;
   margin: 8px 0;  
   display: inline-block;  
   border: 2px solid #ccc; 

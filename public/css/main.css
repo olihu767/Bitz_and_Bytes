@@ -99,6 +99,64 @@ main {
   margin-top: 100px;  
 } 
  
+/* .packages {
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: center;
+  margin: auto;
+} */
+
+/* .packages img {
+  
+  padding-right: 30px;
+  padding-left: 30px; 
+} */
+
+
+/* .packages figure {
+  Color: black;
+  padding-top: 50px;
+  font-family: "Kurale", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+  background-image: url("https://picsum.photos/id/344/750/750");  
+  border-radius: 8px;
+  }
+
+  .packages figure:hover {
+    background-image: linear-gradient(rgb(178, 233, 236), lightblue);
+  } */
+
+  #figure #text {
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 45px;
+    justify-content: center;
+    margin: 100px 0;  
+    border-radius: 8px; 
+  } 
+  
+  /* #figure_text p {
+    flex-wrap: wrap;
+    background-image: url("https://picsum.photos/id/344/2000/2000");   
+    text-align: justify;
+    font-size: 25px;
+    border-radius: 10px;
+    font-family: "Kurale", sans-serif;
+  }  */
+
+  /* #figure_text img {
+    border-radius: 15px;
+    border: 1px solid black;
+    color: black;
+  }  
+
+  #figure img{
+    background-image: url("https://picsum.photos/id/344/2000/2000");   
+  } */
+
+
  /* Adjust header container in the middle of Hero section */ 
 
 .h1 { 
@@ -108,7 +166,8 @@ main {
   text-align: center; 
   /* margin: 100px 0;  */
   margin-bottom: 100px;  
-  margin-top: 10px;  
+  margin-top: 150px; 
+
 } 
  
 .h2 { 

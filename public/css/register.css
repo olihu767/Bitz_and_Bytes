@@ -9,8 +9,10 @@
   background-color: rgb(124, 110, 110); 
   border-radius: 2px;   
   box-shadow: 10px 10px 15px 2px rgb(173, 183, 230);  
-  width: 50%; 
+  width: 30%; 
   margin: auto; 
+  font-size: 35px;
+  font-family: "Kurale", sans-serif; 
 }
 
 /* Adjust register header */ 
@@ -37,7 +39,8 @@ input[type=email], input[type=text], input[type=password] {
   display: inline-block;  
   border: 2px solid #ccc; 
   box-sizing: border-box; 
-  font-size: 15px; 
+  font-size: 15px;
+  font-family: "Karla", sans-serif; 
 }
 
 /* add input required */
