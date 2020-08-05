@@ -100,3 +100,15 @@ input:focus:valid {
 }
 
 
+.contact_info{
+  border-radius: 5px;
+  background-color: rgb(247, 214, 214);
+  border-radius: 2px;   
+  box-shadow: 10px 10px 15px 2px rgb(173, 183, 230);   
+  padding: 10px;
+  width: 40%; 
+  margin: auto;
+  font-size: 20px;
+  font-family: "Kurale", sans-serif; 
+}
+
