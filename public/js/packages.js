@@ -7,30 +7,28 @@ fetch('http://localhost:3000/api/packages')
   })
   .then(function(data) {
 
-   const packagesList = data;
+    const packagesList = data;
 
-  let packagesTemplate = ''; 
+    let packagesTemplate = ''; 
 
-  const packages = document.querySelector('.packages'); 
+    const packages = document.querySelector('.packages'); 
 
-  packagesList.forEach(function(item){
-    packagesTemplate += 
-      `<figure>
-        ${item.PkgName}
-        <a href= "${item.ImgId}">
-        <img src="https://picsum.photos/id/${item.ImgId}/300" alt="${item.PkgName}"></a>
+    packagesList.forEach(function(item){
+      packagesTemplate += 
+        `<figure>
+          ${item.PkgName}
+          <a href= "${item.ImgId}">
+          <img src="https://picsum.photos/id/${item.ImgId}/300" alt="${item.PkgName}">
+          </a>
           <ul>
             <li>Promotion Start Date: ${item.PkgStartDate}</li>
             <li>Promotion End Date: ${item.PkgEndDate}</li>
             <li>Book today starting from only: $${item.PkgBasePrice}!CAD</li>
             <button><a href = "/${item.PkgPage}">Book Now!</a></button>
           </ul>
-      </figure>`;
-  });
-
-  packages.innerHTML = packagesTemplate;  
- 
+        </figure>`;
+   
+    packages.innerHTML = packagesTemplate;  
+    });
 });
-
-
     
