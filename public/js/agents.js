@@ -15,15 +15,15 @@ fetch('http://localhost:3000/api/agents')
     agentsList.forEach(function(item){
       agentsTemplate += 
         `<figure>
-        <ul>
-        <legend>Travel Agent:</legend>
-          <li>${item.AgtFirstName}</li>   
-          <li>${item.AgtLastName}</li>
-          <li>Office:${item.AgtBusPhone}</li> 
-          <li>Email: ${item.AgtEmail}</li>  
-        </ul>
+          <ul>
+          <legend>Travel Agent:</legend>
+            <li>${item.AgtFirstName}</li>   
+            <li>${item.AgtLastName}</li>
+            <li>Office:${item.AgtBusPhone}</li> 
+            <li>Email: ${item.AgtEmail}</li>  
+          </ul>
         </figure>`;
-});
     agents.innerHTML = agentsTemplate;  
+  });
 });
 
