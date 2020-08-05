@@ -5,10 +5,10 @@
 /* Adjust register container  */ 
 
 .container_register {
-  padding: 20px 20px ; 
-  background-color: #d17db8; 
-  border-radius: 7px;   
-  box-shadow: 10px 10px 15px 2px lightblue;  
+  padding: 15px ; 
+  background-color: rgb(124, 110, 110); 
+  border-radius: 2px;   
+  box-shadow: 10px 10px 15px 2px rgb(173, 183, 230);  
   width: 50%; 
   margin: auto; 
 }
@@ -23,7 +23,7 @@
 /* Add Lorem Picsum background  */ 
 .sky {
   margin: 0; 
-  background-image: url("https://picsum.photos/id/360/2000/2000");; 
+  background-image: url("../images/travel.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -67,14 +67,14 @@ input:focus:valid {
 }
 
 button{
-  width: 100%;
+  width: 50%;
   background-color: #ce8d83; 
   padding: 15px;
   margin: 8px 0;  
   display: inline-block;  
   border: 2px solid #ccc; 
   box-sizing: border-box; 
-  font-size: 30px;
+  font-size: 20px;
 
 }
 

@@ -8,7 +8,7 @@
   padding: 25px;
   width: 50%; 
   font-size: 35px;  
-  background-color: #d17db8; 
+  background-color: #4a2d8d; 
   border-radius: 7px;   
   box-shadow: 10px 10px 15px 2px lightblue;
   margin: auto;  
@@ -24,7 +24,7 @@
 /* Add Lorem Picsum background  */ 
 .mountain {
   margin: 0; 
-  background-image: url("https://picsum.photos/id/102/2000/2000"); 
+  background-image: url("https://picsum.photos/id/1015/1000/1000"); 
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

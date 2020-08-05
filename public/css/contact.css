@@ -7,7 +7,7 @@
 
 .contact {
   margin: 0; 
-  background-image: url("https://picsum.photos/id/125/2000/2000"); 
+  background-image: url("https://www.contentedtraveller.com/wp-content/uploads/2015/11/4-Places-To-Relax-This-Summer4-1080x675.jpg"); 
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -16,9 +16,9 @@
 /* Adjust contact container */
 .container_contact {
   border-radius: 5px;
-  background-color: #d17db8; 
-  padding: 30px;
-  width: 40%; 
+  background-color: rgb(247, 214, 214); 
+  padding: 20px;
+  width: 30%; 
   margin: auto; 
 }
 
@@ -26,7 +26,7 @@
 
 .container_contact h3 {
   text-align: center;
-  font-size: 40px;
+  font-size: 30px;
   font-family: "Karla", sans-serif;  
 }
 
@@ -34,7 +34,7 @@
 
 #name_input, #email_input, #text-input {
   width: 100%;
-  padding: 15px;
+  padding: 10px;
   margin: 8px 0;  
   display: inline-block;  
   border: 2px solid #ccc; 
@@ -56,14 +56,14 @@ input[type=text], select, textarea {
 
  
 button{
-  width: 100%;
-  background-color: #ce8d83; 
+  width: 30%;
+  background-color: #c95336; 
   padding: 15px;
-  margin: 8px 0;  
+  margin: 6px 0;  
   display: inline-block;  
   border: 2px solid #ccc; 
   box-sizing: border-box; 
-  font-size: 30px;
+  font-size: 20px;
 
 }
   
