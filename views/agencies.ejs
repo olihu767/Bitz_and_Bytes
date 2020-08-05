@@ -3,22 +3,22 @@
 <%- include('./partials/header'); %>
 
 <body class="contact">
+    <main class="contactform">
+      <div class="container_contact">
+        <h3 id="contactform">Contact Form</h3>
+          <form action="/comments" method="post">
+            <label for="custName" class="required">Name</label>
+              <input type="text" name="custName" id="name_input" placeholder="Your name.." required>
+            <label for="custEmail" class="required">Email Address</label>
+              <input type="email" name="custEmail" id="email_input" placeholder="Enter your email address" required>       
+            <label for="custComments" class="required">Message</label>
+           <textarea id="subject" name="custComments" id="text_input" placeholder="Your message.." style="height:100px" required></textarea>
+           <button class=submit_btn>Submit</button>
+         </form>
+      </div>
+    </main>
   <section class="agencies"></section>
   <section class="agents"></section>
-  <main class="contactform">
-  <div class="container_contact">
-  <h3 id="contactform">Contact Form</h3>
-  <form action="/comments" method="post">
-  <label for="custName" class="required">Name</label>
-  <input type="text" name="custName" id="name_input" placeholder="Your name.." required>
-  <label for="custEmail" class="required">Email Address</label>
-  <input type="email" name="custEmail" id="email_input" placeholder="Enter your email address" required>       
-  <label for="custComments" class="required">Message</label>
-  <textarea id="subject" name="custComments" id="text_input" placeholder="Your message.." style="height:100px" required></textarea>
-  <button class=submit_btn>Submit</button>
-  </form>
-  </div>
-  </main>
 </body>
 <%- include('./partials/js-global'); %>
 <%- include('./partials/footer'); %>

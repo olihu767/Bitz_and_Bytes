@@ -89,7 +89,7 @@ app.get('/registered', function(request, response){
   response.render('registered', {title: "Registration Complete"});
 });
 
-app.get('/:id', function(request, response,){
+app.get('/agencies/:id', function(request, response,){
 
   Agencies.findOne({'id': request.params.id}, function(error, agencies) {
     // Check for IDs that are not in the list //
@@ -108,7 +108,7 @@ app.get('/:id', function(request, response,){
     });
   });
   
-  app.get('/:id', function(request, response,){
+  app.get('/agents/:id', function(request, response,){
   
     Agents.findOne({'id': request.params.id}, function(error, agents) {
       // Check for IDs that are not in the list //

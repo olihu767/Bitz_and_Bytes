@@ -6,24 +6,26 @@ fetch('http://localhost:3000/api/agents')
   })
   .then(function(data) {
 
-   const agentsList = data;
+  const agentsList = data;
 
-    let agentsTemplate = ''; 
+  let agentsTemplate = ''; 
 
-    const agents = document.querySelector('.agents'); 
+  const agents = document.querySelector('.agents'); 
 
-    agentsList.forEach(function(item){
-      agentsTemplate += 
-        `<figure>
-          <ul>
-          <legend>Travel Agent:</legend>
-            <li>${item.AgtFirstName}</li>   
-            <li>${item.AgtLastName}</li>
-            <li>Office:${item.AgtBusPhone}</li> 
-            <li>Email: ${item.AgtEmail}</li>  
-          </ul>
-        </figure>`;
-    agents.innerHTML = agentsTemplate;  
+  agentsList.forEach(function(item){
+    agentsTemplate += 
+      `<figure>
+        <ul>
+        <legend>Travel Agent:</legend>
+          <li>${item.AgtFirstName}</li>   
+          <li>${item.AgtLastName}</li>
+          <li>Office:${item.AgtBusPhone}</li> 
+          <li>Email: ${item.AgtEmail}</li>  
+        </ul>
+      </figure>`;
   });
+  
+agents.innerHTML = agentsTemplate;  
+ 
 });
 
