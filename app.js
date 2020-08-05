@@ -7,7 +7,7 @@ const cors       = require('cors');
 const moment     = require('moment'); 
 const today      = moment();
 const bodyParser = require('body-parser');
-const { forEach } = require('async');
+
 // create express app
 const app        = express();
 app.set('view engine', 'ejs');
@@ -89,6 +89,43 @@ app.get('/registered', function(request, response){
   response.render('registered', {title: "Registration Complete"});
 });
 
+app.get('/:id', function(request, response,){
+
+  Agencies.findOne({'id': request.params.id}, function(error, agencies) {
+    // Check for IDs that are not in the list //
+    if (!agencies) {
+      return response.send('Sorry Invalid ID.');
+    }
+    // Compile view and respond //
+    response.render('agencies', agencies);
+    });
+  });
+  
+  // This is the endpoint that the ****************
+  app.get('/api/agencies', function(request, response,){
+    Agencies.find(function(error, agencies) { 
+      response.json(agencies);
+    });
+  });
+  
+  app.get('/:id', function(request, response,){
+  
+    Agents.findOne({'id': request.params.id}, function(error, agents) {
+      // Check for IDs that are not in the list //
+      if (!agents) {
+        return response.send('Sorry Invalid ID.');
+      }
+      // Compile view and respond //
+      response.render('agents', agents);
+      });
+    });
+    
+    // This is the endpoint that the ****************
+    app.get('/api/agents', function(request, response,){
+      Agents.find(function(error, agents) { 
+        response.json(agents);
+      });
+    });
 
 app.get('/packages/:id', function(request, response,){
 
@@ -197,48 +234,8 @@ app.post ("/comments", function(req, res){
   }); 
 });
 
-
-app.get('/:id', function(request, response,){
-
-Agencies.findOne({'id': request.params.id}, function(error, agencies) {
-  // Check for IDs that are not in the list //
-  if (!agencies) {
-    return response.send('Sorry Invalid ID.');
-  }
-  // Compile view and respond //
-  response.render('agencies', agencies);
-  });
-});
-
-// This is the endpoint that the ****************
-app.get('/api/agencies', function(request, response,){
-  Agencies.find(function(error, agencies) { 
-    response.json(agencies);
-  });
-});
-
-app.get('/:id', function(request, response,){
-
-  Agents.findOne({'id': request.params.id}, function(error, agents) {
-    // Check for IDs that are not in the list //
-    if (!agents) {
-      return response.send('Sorry Invalid ID.');
-    }
-    // Compile view and respond //
-    response.render('agents', agents);
-    });
-  });
-  
-  // This is the endpoint that the ****************
-  app.get('/api/agents', function(request, response,){
-    Agents.find(function(error, agents) { 
-      response.json(agents);
-    });
-  });
-
 /// necessary for 4 digit year in footer //
 app.locals.moment = moment;
-
 
 // If no file or endpoint found, send a response to the 404 page //
 app.use(function(req, res, next) {

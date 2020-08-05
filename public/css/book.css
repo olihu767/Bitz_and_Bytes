@@ -5,12 +5,13 @@
 /* Adjust container  */ 
 
 .container_book {
-  padding: 20px 20px ; 
-  background-color: #d17db8; 
-  border-radius: 7px;   
-  box-shadow: 10px 10px 15px 2px lightblue;  
+  padding: 25px;
   width: 50%; 
-  margin: auto; 
+  font-size: 35px;  
+  background-color: #4a2d8d; 
+  border-radius: 7px;   
+  box-shadow: 10px 10px 15px 2px lightblue;
+  margin: auto;  
 }
 
 /* Adjust header */ 
@@ -72,4 +73,8 @@ button{
   box-sizing: border-box; 
   font-size: 30px;
 
+}
+
+.date_time {
+  font-size: 40px;
 }
