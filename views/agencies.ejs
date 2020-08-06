@@ -1,61 +1,40 @@
-<%- include('./partials/css-global'); %>
+<<%- include('./partials/css-global'); %>
 <%- include('./partials/head'); %> 
 <%- include('./partials/header'); %>
 
-
- <!-- make a body class for css or use main class? -->
-<body>
-<section class="agencies">
-<div class="container">
-  <div class="contactinfo">
-  <h2>Contact Form</h2>
-  <ul class="info">
-    <li>
-      <span><% page_data.agencies_data.forEach(function(agency){ %><br>
-        <%= agency.AgncyAddress %> <br>
-        Ph: <%= agency.AgncyPhone %><br>
-        <%= agency.AgncyCity %>, <%= agency.AgncyProv %>, <%= agency.AgncyCountry %><br>
-        <%= agency.AgncyPostal %><br>
-        <!-- Fax: <%= agency.AgncyFax %><br></span> -->
-    </li> 
-    <li>
-      <span><% page_data.agents_data.forEach(function(agent) { %>
-        <% if(agent.AgencyId == agency.AgencyId) { %><br>
-          <%= agent.AgtPosition %>:<br> <%= agent.AgtFirstName %> <%= agent.AgtLastName %><br> 
-          Ph: <%= agent.AgtBusPhone %><br><%} %>
-        <%});
-      %><%})
-     %></span>
-     </li>
+<body class="contact">
+  <main class="contactform">
+    <div class="container_contact">
+      <h3 id="contactform">Contact Us</h3>
+        <div class= "contact_info">
+          <% page_data.agencies_data.forEach(function(agency){ %>
+            <%= agency.AgncyCity %> <br><br>
+              <%= agency.AgncyAddress %>&nbsp; <%= agency.AgncyCity %>,&nbsp;<%= agency.AgncyProv %>,&nbsp; <%= agency.AgncyCountry %>&nbsp; <%= agency.AgncyPostal %><br>
+                Ph: <%= agency.AgncyPhone %><br>
+                Fax: <%= agency.AgncyFax %><br><br>
+          <% page_data.agents_data.forEach(function(agent) { %>
+            <% if(agent.AgencyId == agency.AgencyId) { %>
+              <%= agent.AgtPosition %> : <%= agent.AgtFirstName %> <%= agent.AgtLastName %>&nbsp;Ph: <%= agent.AgtBusPhone %><br><br><%} 
+              %><%
+            });
+            %><%
+          })%>
+        </div>
+      <h3>Send Us a Message</h3>
+      <form action="/comments" method="post">
+        <label for="custName" class="required">Name</label>
+          <input type="text" name="custName" id="name_input" placeholder="Your name.." required>
+        <label for="custEmail" class="required">Email Address</label>
+          <input type="email" name="custEmail" id="email_input" placeholder="Enter your email address" required>       
+        <label for="custComments" class="required">Message</label>
+        <textarea id="subject" name="custComments" id="text_input" placeholder="Your message.." style="height:100px" required></textarea>
+        <button class=submit_btn>Submit</button>
+      </form>
     </div>
-  <div class="contactForm">
-    <h2>Send a Message</h2>
-    <form action="/comments" method="post"></form>
-    <div class="formBox">
-      <div class="inputBox w50">
-      <label for="custName" class="required">Name</label>
-        <input type="text" name="custName" id="name_input" placeholder="Your name.." required>
-      </div>
-      <div class="inputBox w50">
-      <label for="custEmail" class="required">Email Address</label>
-        <input type="email" name="custEmail" id="email_input" placeholder="Enter your email address" required>    
-      </div>   
-      <div class="inputBox w100">
-      <label for="custComments" class="required">Message</label>
-      <textarea id="subject" name="custComments" id="text_input" placeholder="Your message.." style="height:100px" required></textarea>
-      </div>
-      <div class="inputBox w100">
-      <button class=submit_btn>Submit</button>
-      </div>
-    </div>
-    </form>  
-  </div>
   </main>
-</section>
 </body>
+  
+
+
 <%- include('./partials/js-global'); %>
 <%- include('./partials/footer'); %>
-
-
-
-
