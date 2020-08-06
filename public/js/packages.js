@@ -14,6 +14,13 @@ fetch('http://localhost:3000/api/packages')
     const packages = document.querySelector('.packages'); 
 
     packagesList.forEach(function(item){
+     
+    var pkgDate = parseInt((new Date('${item.PkgStartDate}').getTime() / 1000).toFixed(0));
+    var currentDate = moment().unix();
+        if (currentDate < pkgDate){
+            class = goodDate}
+        else {} 
+
       packagesTemplate += 
         `<figure>
           ${item.PkgName}
