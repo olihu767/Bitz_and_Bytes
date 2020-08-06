@@ -5,7 +5,7 @@
 <body class="contact">
   <main class="contactform">
     <div class="container_contact">
-      <h3 id="contactform">Contact Us</h3>
+      <h3 id="contactform">Contact Info</h3>
         <div class= "contact_info">
           <% page_data.agencies_data.forEach(function(agency){ %>
             <%= agency.AgncyCity %> <br><br>
@@ -33,4 +33,5 @@
     </div>
   </main>
 </body>
-  
+<%- include('./partials/js-global'); %>
+<%- include('./partials/footer'); %>

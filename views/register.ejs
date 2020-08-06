@@ -6,18 +6,26 @@
    <main class="register_form">
      <form action="/customers" method="post">
        <div class="container_register">
-         <h2 id="register">Registration Page</h2>
-          <input type = "text" placeholder = "Enter First Name" name = "firstName" required>
-          <input type = "text" placeholder = "Enter Last Name" name = "lastName" required>
-          <input type = "text" placeholder = "Enter Street Address" name = "address" required>
-          <input type = "text" placeholder = "Enter City" name = "city" required>
-          <input type = "text" placeholder = "Enter Province" name = "prov" required>
-          <input type = "text" placeholder = "Enter Postal Code" name = "postal" required>
-          <input type = "text" placeholder = "Enter Home Phone Number" name = "homePhone" required>
-          <input type = "text" placeholder = "Enter Business Phone Number" name = "busPhone" required>
-          <input type = "email" placeholder = "Enter your email address" name="email" required>
-          <input type = "text" placeholder = "Create a User Name" name = "userid" required>
-          <input type = "password" placeholder= "Enter a Password" name = "passwd" minlength="8" required>
+         <h2 id="register">Registration</h2>
+         <label for="firstName" class="required">First Name:</label>
+          <input type = "text" placeholder = "First Name" name = "firstName" required>
+          <label for="lastName" class="required">Last Name:</label>
+          <input type = "text" placeholder = "Last Name" name = "lastName" required>
+          <label for="address" class="required">Address Details:</label>
+          <input type = "text" placeholder = "Street Address" name = "address" required>
+          <input type = "text" placeholder = "City" name = "city" required>
+          <input type = "text" placeholder = "Province" name = "prov" required>
+          <input type = "text" placeholder = "Postal Code" name = "postal" required>
+          <label for="homePhone" class="required">Home Phone:</label>
+          <input type = "text" placeholder = "Home Phone Number" name = "homePhone" required>
+          <label for="busPhone" class="required">Business Phone</label>
+          <input type = "text" placeholder = "Business Phone Number" name = "busPhone" required>
+          <label for="email" class="required">Email Address:</label>
+          <input type = "email" placeholder = "Email address" name="email" required>
+          <label for="userName" class="required">Create a Username:</label>
+          <input type = "text" placeholder = "User Name" name = "userid" required>
+          <label for="password" class="required">Create a Password:</label>
+          <input type = "password" placeholder= "Password" name = "passwd" minlength="8" required>
           <button class=submit_btn>Submit</button>
       </div>
      </form>
