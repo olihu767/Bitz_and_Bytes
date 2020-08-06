@@ -11,15 +11,16 @@ fetch('http://localhost:3000/api/packages')
 
     let packagesTemplate = ''; 
 
-    const packages = document.querySelector('.packages'); 
+    const packages = document.querySelector('.packages');
+     
+    const pkgDate = parseInt((new Date(`${item.PkgStartDate}`).getTime() / 1000).toFixed(0));
+    const currentDate = moment().unix();
+        if (currentDate < pkgDate){
+            className = "goodDate"}
+        else {}; 
 
     packagesList.forEach(function(item){
      
-    var pkgDate = parseInt((new Date('${item.PkgStartDate}').getTime() / 1000).toFixed(0));
-    var currentDate = moment().unix();
-        if (currentDate < pkgDate){
-            class = goodDate}
-        else {} 
 
       packagesTemplate += 
         `<figure>
@@ -36,6 +37,6 @@ fetch('http://localhost:3000/api/packages')
         </figure>`;
    
     packages.innerHTML = packagesTemplate;  
-    });
+  });
 });
     
