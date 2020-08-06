@@ -71,7 +71,10 @@ app.get('/register', function(request, response){
 });
 
 app.get('/packages', function(request, response){
-  response.render('packages', {title: "Vacation Packages"});
+  Packages.find(function (error, packages) {
+    data = { packages_data: packages }
+    response.render('packages', {title: "Vacation Packages"});
+  });  
 });
 
 app.get('/agencies', function (request, response) {
@@ -81,7 +84,7 @@ app.get('/agencies', function (request, response) {
       response.render('agencies', { page_data: data, title:  "Contact Us" });
     })
   });
-})
+});
 
 app.get('/thankyou', function(request, response){
   response.render('thankyou', {title: "Thank You"});
@@ -149,7 +152,7 @@ app.post ("/bookings", function(req, res){
   const newBookings = { 
     BookingDate:   bookingDate,   
     CustFirstName: firstName,
-    CustLastName:  lastName,           
+    CustLastName:  lastName,     
     CustHomePhone: homePhone,
     CustBusPhone:  busPhone,       
     TravelerCount: travelerCount,   

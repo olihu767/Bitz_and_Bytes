@@ -1,15 +1,14 @@
-     /* ------------------ */
- /* BOOKING CONTAINER */
 /* ------------------ */
+/* BOOKING CONTAINER */
+/* ----------------- */
 
 /* Adjust container  */ 
-
 .container_book {
   padding: 10px;
   width: 30%; 
   font-size: 35px;
   font-family: "Kurale", sans-serif;  
-  background-color: #4a2d8d; 
+  background-color: #2d478d; 
   border-radius: 7px;   
   box-shadow: 10px 10px 15px 2px lightblue;
   margin: auto;  
@@ -21,11 +20,9 @@
   text-align: center;  
 } 
 
-/* Add Lorem Picsum background  */ 
-
 .book {
   margin: 0; 
-  background-image: url("https://picsum.photos/id/360/2000/2000");; 
+  background-image: url("../images/main_page.jpg"); 
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -35,7 +32,6 @@
 }
 
 /* Placement adjustments */
-
 input[type=date], input[type=text] {
   width: 100%;
   padding: 15px;
@@ -81,7 +77,6 @@ button{
 /* ------------------ */
 
 /* Adjust container  */ 
-
 .packages {
   display: flex;
   flex-wrap: wrap;

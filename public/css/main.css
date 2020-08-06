@@ -51,8 +51,7 @@
   /* HERO SECTION */
  /*------------  */
  
- /* Hero section image */
- 
+ /* Section image */
 body {
   margin: 0;  
   background-image: url("../images/main_page.jpg"); 
@@ -73,16 +72,12 @@ main {
 } 
  
  /* Adjust header container in the middle of Hero section */ 
-
 .h1 { 
   padding: 80px;    
   font-variant: small-caps;   
   font-size: 30px; 
   text-align: center; 
   margin: 100px 0; 
-  /* margin-bottom: 120px;  
-  margin-top: 100px;  */
-
 } 
  
 .h2 { 
@@ -138,7 +133,6 @@ input:focus:valid {
    /*----------------*/
   /*     PAGE 404   */
  /*----------------*/
- 
 .page404 {
   display: flex;
   flex-wrap: wrap;  
@@ -156,7 +150,6 @@ input:focus:valid {
 /* -------------- */
  
  /* Footer Section settings */
-
 footer{
 	display: flex;
   flex-wrap: wrap;
@@ -247,8 +240,6 @@ footer{
   margin: 20px;
   box-sizing: content-box;
   width: 130%;
-  /* border: solid #5B6DCD 10px;
-  padding: 25px; */
 }
  
 .footer-company-about span {

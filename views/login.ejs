@@ -3,20 +3,20 @@
 <%- include('./partials/header'); %>
 
 <body class="mountain"> 
-<!-- <div class="h2"> -->
-<main class="signin_form">
-<form action="#" method="post">
-<div class="container_login">
-<legend>Please Login</legend>
-<label for="email_input" class="required" >Email Address</label>
-<input type="email" name="emails" id="email_login" placeholder="Enter your email address" required>
-<label for="pass_input" class="required"> Password (8 characters minimum) </label>
-<input type="password" name="passwords" id="pass_login" minlength="8" placeholder="Enter your password" required>
-<button class=submit_btn>Sign In</button>
-</form>
-</main> 
-<!-- </div> -->
-</div> 
+  <main class="signin_form">
+    <form action="#" method="post">
+      <div class="container_login">
+        <legend>Please Login</legend>
+          <label for="email_input" class="required" >Email Address</label>
+            <input type="email" name="emails" id="email_login" placeholder="Enter your email address" required>
+          <label for="pass_input" class="required"> Password (8 characters minimum) </label>
+            <input type="password" name="passwords" id="pass_login" minlength="8" placeholder="Enter your password" required>
+        <button class=submit_btn>Sign In</button>
+     </div> 
+     <button class=submit_btn><a href = "/register">New Users Please Register</a></button>
+    </form>
+  </main> 
 </body>
+
 <%- include('./partials/js-global'); %>
 <%- include('./partials/footer'); %>

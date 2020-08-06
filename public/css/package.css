@@ -1,9 +1,7 @@
 .packages{
-  
   justify-content: flex-start; 
   background-color: #e4e5eb;
-  color: black;
-
+  
   margin: 20px;
   border-radius: 20px; 
 
@@ -17,7 +15,6 @@
 }
 
 /* packages style */
-
 figure {
   text-align: left;
   font-size: 20px;
@@ -34,6 +31,7 @@ figure li
 figure ul {
   padding: 0;
 }
+
 button {
   width: 100%;
   background-color: #c95336; 
@@ -49,4 +47,8 @@ button a {
   font-size: 25px;
   text-decoration: none;
   color: black;
+}
+
+img {
+  border-radius: 50%;
 }
