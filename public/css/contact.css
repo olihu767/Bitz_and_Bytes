@@ -1,60 +1,152 @@
-
     /*----------------------*/
    /*                      */
   /* CONTACT FORM SECTION */
  /*                      */
 /*----------------------*/
 
-.contact {
-  background-image: url("https://www.contentedtraveller.com/wp-content/uploads/2015/11/4-Places-To-Relax-This-Summer4-1080x675.jpg"); 
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*
+{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Adjust contact container */
-.container_contact {
-  border-radius: 5px;
-  background-color: rgb(247, 214, 214);
-  border-radius: 2px;   
-  box-shadow: 10px 10px 15px 2px rgb(173, 183, 230);   
-  padding: 15px;
-  margin: auto;
-  font-size: 35px;
-  font-family: "Kurale", sans-serif; 
-  width: 30%;
+section
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  
 }
 
-/* Adjust contact header */ 
-.container_contact h3 {
-  text-align: center;
-  font-size: 35px;
+section::before
+{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 120%;
+} 
+
+section .container
+{
+  position: relative;
+  min-width: 1100px;
+  min-height: 550px;
+  display: flex;
+  z-index: 1000; 
+} 
+
+section .container .contactinfo
+{
+  position: absolute; 
+  top: 10px;
+  width: 300px;
+  height: calc(100% - 80px);
+  background: #2984ca;
+  z-index: 1; 
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  /* justify-self: space-between; */
+  /* box-shadow: 0 20px 20px rgba(0,0,0,0.2); */
+} 
+
+section .container .contactinfo h2
+{
+  color:rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: 100;
+} 
+
+section .container .contactinfo .info
+{
+  position: relative;
+  margin: 1px;
+} 
+
+section .container .contactinfo .info li
+{
+  position: relative;
+  list-style: none;
+  display: flex;
+  /* margin:5px 0; */
+  cursor: pointer;
+  align-items: flex-start;
 }
 
-/* Box placement adjustments */
-#name_input, #email_input, #text-input {
+section .container .contactForm
+{
+  position: absolute;
+  padding: 50px;
+  background: #fff;
+  margin-left: 150px;
+  padding-left: 250px;
+  width: calc(100% - 150px);
+  height: 100%;
+}
+
+section .container .contactForm h2
+{
+  color:#1994f1;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+section .container .contactForm .formBox
+{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+section .container .contactForm .formBox .inputBox
+{
+  position: relative;
+  margin:0 0 35px;
+}
+
+section .container .contactForm .formBox .inputBox.w50
+{
+  width: 47%;
+}
+
+section .container .contactForm .formBox .inputBox.w100
+{
   width: 100%;
-  padding: 10px;
-  margin: 8px 0;  
-  display: inline-block;  
-  border: 2px solid #ccc; 
-  box-sizing: border-box; 
-  font-size: 15px;
-  font-family: "Karla", sans-serif;  
 }
- 
-input[type=text], select, textarea {
-  width: 100%; 
-  padding: 12px; 
-  margin-top: 6px; 
-  margin-bottom: 10px;   
-  resize:vertical; 
-  font-size: 15px;
-  font-family: "Karla", sans-serif;  
+
+section .container .contactForm .formBox .inputBox input,
+section .container .contactForm .formBox .inputBox textarea
+{
+  width: 100% !important;
+  padding: 5px 0;
+  resize: none;
+  font-size: 18px;
+  font-weight: 300;
+  color: rgb(161, 93, 93);
+  border: none;
+  border-bottom: 1px solid rgb(221, 20, 20);
+  outline: none;
+} 
+
+section .container .contactForm .formBox .inputBox textarea
+{
+  min-height: 120px;
 }
- 
+
 /* Style the submit button with a specific background color etc */
-button{
+
+ 
+section .container .contactForm .formBox .inputBox button{
+  width: 30%;
   background-color: #c95336; 
   padding: 15px;
   margin: 6px 0;  
@@ -64,7 +156,12 @@ button{
   font-size: 20px;
 }
   
-.required {
+/* When moving the mouse over the submit button, add a brighter color */
+ input[type=submit]:hover {
+   background-color: #5d53e7;
+ }
+ 
+ .required {
   float: left;
   font-family: "Karla", sans-serif; 
   font-size: 20px; 
@@ -84,15 +181,5 @@ input:focus:invalid  {
 input:focus:valid {
   background-color: rgba(56, 233, 21, 0.64);
   transition: background-color 300ms;
-}
-/* Style the agents and agencies section */
-.contact_info {
-  border-radius: 5px;
-  background-color: rgb(214, 226, 247);
-  border-radius: 2px;   
-  box-shadow: 10px 10px 15px 2px rgb(173, 183, 230);   
-  padding: 15px;
-  font-size: 20px;
-  line-height: 1em;
 }
 
