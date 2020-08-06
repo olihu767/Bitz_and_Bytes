@@ -13,11 +13,11 @@ fetch('http://localhost:3000/api/packages')
 
     const packages = document.querySelector('.packages');
      
-    const pkgDate = parseInt((new Date(`${item.PkgStartDate}`).getTime() / 1000).toFixed(0));
-    const currentDate = moment().unix();
-        if (currentDate < pkgDate){
-            className = "goodDate"}
-        else {}; 
+    // const pkgDate = parseInt((new Date(`${item.PkgStartDate}`).getTime() / 1000).toFixed(0));
+    // const currentDate = moment().unix();
+    //     if (currentDate < pkgDate){
+    //         className = "goodDate"}
+    //     else {}; 
 
     packagesList.forEach(function(item){
      
