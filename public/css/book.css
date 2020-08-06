@@ -1,4 +1,82 @@
-    /* ------------------ */
+     /* ------------------ */
+ /* BOOKING CONTAINER */
+/* ------------------ */
+
+/* Adjust container  */ 
+
+.container_book {
+  padding: 10px;
+  width: 30%; 
+  font-size: 35px;
+  font-family: "Kurale", sans-serif;  
+  background-color: #4a2d8d; 
+  border-radius: 7px;   
+  box-shadow: 10px 10px 15px 2px lightblue;
+  margin: auto;  
+}
+
+/* Adjust header */ 
+.container_book h2 { 
+  font-size: 25px; 
+  text-align: center;  
+} 
+
+/* Add Lorem Picsum background  */ 
+
+.book {
+  margin: 0; 
+  background-image: url("https://picsum.photos/id/360/2000/2000");; 
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  justify-content: center;
+  padding: 0;    
+}
+
+/* Placement adjustments */
+
+input[type=date], input[type=text] {
+  width: 100%;
+  padding: 15px;
+  margin: 8px 0;  
+  display: inline-block;  
+  border: 2px solid #ccc; 
+  box-sizing: border-box; 
+  font-size: 15px;
+  font-family: "Karla", sans-serif;   
+}
+
+/* add input required */
+.required:after {
+  content:" *";
+  color: red;
+}
+
+input:focus:invalid  {
+  background-color: rgba(241, 41, 41, 0.64);
+  border: 0px;
+  transition: background-color 300ms;
+}
+
+input:focus:valid {
+  background-color: rgba(56, 233, 21, 0.64);
+  transition: background-color 300ms;
+}
+
+
+button{
+  width: 100%;
+  background-color: #c95336; 
+  padding: 15px;
+  margin: 6px 0;  
+  display: inline-block;  
+  border: 2px solid #ccc; 
+  box-sizing: border-box; 
+  font-size: 20px;
+  text-decoration: none;
+}
+   /* ------------------ */
  /* BOOKING CONTAINER */
 /* ------------------ */
 
@@ -19,10 +97,7 @@ figure {
   text-align: center;
 }
 
-button {
-  width: 100px;
 
-}
 img {
   margin-top: 40px;
 }
