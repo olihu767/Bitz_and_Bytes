@@ -1,5 +1,17 @@
 # Bitz_and_Bytes
 
+#### Table of Contents  
+
+* [Project Title](#Project-Title)
+* [Scope of work](#Scope-of-work)
+* [Project setup](#Project-setup)
+* [Technologies/Software](#Technologies/Software)
+* [Frontend/Backend helpful links](#Frontend/Backend-helpful-links)
+* [Frontend part](#Frontend-part)
+* [Backend part](#Backend-part)
+* [Acknowledgements](#Acknowledgements)
+
+
 This is a group project to create a prototype website to upgrade older computer technology for a small travel agency.
 A travel agency contracted Bitz and Bytes team to build a state-of-the-art web/desktop application that will enable customers to place
 online orders and have desktop software for their agents to maintain the data.
@@ -66,8 +78,6 @@ https://kaloraat.com/articles/how-to-use-mongodb-atlas
 https://www.sitepoint.com/managing-dates-times-using-moment-js/
 
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics
-
-## Process
 
 ### Frontend part
 
