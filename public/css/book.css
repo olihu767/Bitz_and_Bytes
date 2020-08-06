@@ -64,7 +64,6 @@ input:focus:valid {
   transition: background-color 300ms;
 }
 
-
 button{
   width: 100%;
   background-color: #ce8d83; 
