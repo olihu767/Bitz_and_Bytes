@@ -13,12 +13,9 @@
   border-radius: 7px;   
   box-shadow: 10px 10px 15px 2px lightblue;
   margin: auto; 
-  margin-bottom: 250px;  
-  margin-top: 250px;  
 }
  
 /* Adjust login legend */ 
-
 .container_login legend {
   padding: 20px;
   text-align: center;
@@ -91,9 +88,5 @@ input:focus:valid {
   font-size: 25px;
   font-family: "Kurale", sans-serif; 
   justify-content: center;
-}
-
-.submit_btn:hover {
-  background-image: linear-gradient(rgb(255, 21, 0), rgb(37,81,204));
 }
 

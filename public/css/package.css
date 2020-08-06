@@ -1,0 +1,52 @@
+.packages{
+  
+  justify-content: flex-start; 
+  background-color: #e4e5eb;
+  color: black;
+
+  margin: 20px;
+  border-radius: 20px; 
+
+  display: ceter; 
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  width: 30%;
+  margin: auto;
+  padding: 70px;
+}
+
+/* packages style */
+
+figure {
+  text-align: left;
+  font-size: 20px;
+  border: thick rgb(132, 177, 214) solid;
+  margin: 1em;
+  padding: 2em; 
+}
+
+figure li
+{
+  list-style: none;
+}
+
+figure ul {
+  padding: 0;
+}
+button {
+  width: 100%;
+  background-color: #c95336; 
+  padding: 15px;
+  margin: 6px 0;  
+  display: inline-block;  
+  border: 2px solid #ccc; 
+  box-sizing: border-box; 
+  font-size: 20px;
+}
+
+button a {
+  font-size: 25px;
+  text-decoration: none;
+  color: black;
+}
