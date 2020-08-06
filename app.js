@@ -67,11 +67,11 @@ app.get('/polynesia', function(request, response){
 });
 
 app.get('/register', function(request, response){
-  response.render('register', {title: "Register"});
+  response.render('register', {title: "Registration"});
 });
 
 app.get('/packages', function(request, response){
-  response.render('packages', {title: "Packages"});
+  response.render('packages', {title: "Vacation Packages"});
 });
 
 app.get('/agencies', function (request, response) {
@@ -83,10 +83,6 @@ app.get('/agencies', function (request, response) {
   });
 })
 
-app.get('/bookings', function(request, response){
-  response.render('bookings', {title: "Booking"});
-});
-
 app.get('/thankyou', function(request, response){
   response.render('thankyou', {title: "Thank You"});
 });
@@ -95,27 +91,14 @@ app.get('/registered', function(request, response){
   response.render('registered', {title: "Registration Complete"});
 });
 
-app.get('/packages/:id', function(request, response,){
-
-// .findOne returns the first object it finds //
-Packages.findOne({'imgId': request.params.id}, function(error, packages) {
-  // Check for IDs that are not in the list //
-  if (!packages) {
-    return response.send('Sorry Invalid ID.');
-  }
-  // Compile view and respond //
-  response.render('packages',packages);
-  });
-});
-
-// This is the endpoint that the ****************
+// Allows the packages to populate in the package page
 app.get('/api/packages', function(request, response,){
   Packages.find(function(error, packages) { 
     response.json(packages);
   });
 });
 
-// Adds customer registration info into Mongo database
+// Adds new customer registration info into Mongo database
 app.post ("/customers", function(req, res){
 
   const firstName      = req.body.firstName;
@@ -155,7 +138,7 @@ app.post ("/customers", function(req, res){
   });
 });
 
-
+// Adds new customer booking info into Mongo database
 app.post ("/bookings", function(req, res){
   const bookingDate    = req.body.bookingDate;
   const firstName      = req.body.firstName;
@@ -181,7 +164,7 @@ app.post ("/bookings", function(req, res){
     }
   }); 
 });
-
+// Adds new customer comments info into Mongo database
 app.post ("/comments", function(req, res){
   const custName      = req.body.custName;
   const custEmail     = req.body.custEmail;
