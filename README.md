@@ -88,6 +88,16 @@ Added upgrades to registration form making
 
 Joyce Ou:
 
+Creation of the github repository.
+
+Creation of Welcome pages and all the background pictures and modified css stylesheet.
+
+Modified ejs and css style sheet on contact pages and packages. 
+
+Cleaned up and modified all the pages as we conduct the enhancement features for the website.
+
+Corodinated with Vadim and other team memember as required.
+
 
 ### Backend part
 
