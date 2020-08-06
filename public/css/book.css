@@ -9,7 +9,7 @@
   width: 30%; 
   font-size: 35px;
   font-family: "Kurale", sans-serif;  
-  background-color: #4a2d8d; 
+  background-color: #2d8d85; 
   border-radius: 7px;   
   box-shadow: 10px 10px 15px 2px lightblue;
   margin: auto;  
@@ -74,5 +74,8 @@ button{
   border: 2px solid #ccc; 
   box-sizing: border-box; 
   font-size: 30px;
+}
 
+.book_btn:hover {
+  background-image: linear-gradient(rgb(255, 21, 0), rgb(37,81,204));
 }

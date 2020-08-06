@@ -93,3 +93,7 @@ input:focus:valid {
   justify-content: center;
 }
 
+.submit_btn:hover {
+  background-image: linear-gradient(rgb(255, 21, 0), rgb(37,81,204));
+}
+
