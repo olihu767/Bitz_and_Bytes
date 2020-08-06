@@ -21,16 +21,38 @@
   padding: 70px;
 }
 
-figure 
+/* packages style */
+
+figure
 {
   /* float: right; */
-  width: 45%;
+  max-width: 45%;
   text-align: left;
   font-style: italic;
   font-size: smaller;
   text-indent: 0;
   border: thick rgb(132, 177, 214) solid;
   margin: 1em;
-  padding: 2em;
+  padding: 2em; 
   
+}
+
+figure img
+{
+  width: auto ;
+  max-width: 100% ;
+  height: auto ;
+  color: blrue
+}
+
+figure li
+{
+  list-style: none;
+}
+
+.promotion
+{
+  color: red;
+  font-weight: bold;
+  font-style: italic;
 }

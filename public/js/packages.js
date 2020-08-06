@@ -29,8 +29,8 @@ fetch('http://localhost:3000/api/packages')
           </a>
           <ul>
             <li>${item.PkgDesc}</li>
-            <li>Promotion Start Date: ${item.PkgStartDate}</li>
-            <li>Promotion End Date: ${item.PkgEndDate}</li>
+            <li class="promotion">Promotion Start Date: ${item.PkgStartDate}<p></li>
+            <li class="promotion">Promotion End Date: ${item.PkgEndDate}</li>
             <li>Book today starting from only: $${item.PkgBasePrice}CAD</li>
             <button><a href = "/${item.PkgPage}">Book Now!</a></button>
           </ul>
