@@ -10,7 +10,7 @@
  /*   HEADER and NAVIGATION   */
 /* ------------------------- */
 #navbar {
-  background-color: rgba(184, 80, 152, 0.472);   
+  background-color: rgba(80, 90, 184, 0.472);   
   padding: 60px; 
   padding-top: 15px;
   width: 100%;
@@ -28,10 +28,12 @@
 
 /* Change the background color on mouse-over */
 #navbar a:hover {
-  background-color: #0c0b0b;
+  /* background-color: #0c0b0b; */
   color: white;
-  opacity: 0.6; 
+  /* opacity: 0.4;  */
+  border-bottom: 3px solid red;
 }
+
 
 /* Float the link section to the right */
 #navbar-right {
@@ -235,8 +237,8 @@ footer{
 .footer-distributed .footer-company-about{
 	line-height: 20px;
 	color:  black;
-	font-size: 15px;
-	font-weight: normal;
+	font-size: 20px;
+	font-weight: bold;
   margin: 20px;
   box-sizing: content-box;
   width: 130%;

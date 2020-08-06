@@ -80,6 +80,8 @@ button{
   border: 2px solid #ccc; 
   box-sizing: border-box; 
   font-size: 20px;
-
 }
 
+.submit_button:hover {
+  background-image: linear-gradient(rgb(255, 0, 212), rgb(89, 34, 218));
+}
