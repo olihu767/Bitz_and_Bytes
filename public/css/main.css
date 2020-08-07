@@ -50,6 +50,9 @@
  
  /* Section image */
 body {
+  margin: 0; 
+  padding: 0;  
+
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
