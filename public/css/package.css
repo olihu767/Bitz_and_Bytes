@@ -1,5 +1,5 @@
 .packages{
-  width: 35%;
+  width: 70%;
   margin: auto;
   margin-top: 15px;
   margin-bottom :15px;
@@ -7,10 +7,13 @@
 
   border-radius: 20px; 
   background-color: #e4e5eb;
+
+  
 }
 
 /* packages style */
 figure {
+  display:inline-block;
   margin: .5em;
   padding: .5em; 
   
@@ -35,7 +38,7 @@ figure ul {
 }
 
 button a {
-  font-size: 25px;
+  font-size: 15px;
   text-decoration: none;
   color: black;
 }
@@ -45,7 +48,8 @@ button:hover {
 }
 
 img {
-  border-radius: 50%;
+  border-radius: 60%;
+  float:right;
 }
 
 @media screen and (max-width: 600px) {

@@ -17,7 +17,7 @@ fetch('http://localhost:3000/api/packages')
       packagesTemplate +=
         `<figure>
           <label>${item.PkgName}</label>
-          <img src="https://picsum.photos/id/${item.ImgId}/375" alt="${item.PkgName}">
+          <img src="https://picsum.photos/id/${item.ImgId}/275" alt="${item.PkgName}">
           </a>
           <ul>
             <li>${item.PkgDesc}</li><br>
