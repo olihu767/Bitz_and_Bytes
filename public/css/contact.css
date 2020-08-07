@@ -55,18 +55,18 @@ input[type=text], select, textarea {
 
 .gmap1 {
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 5px;
   background-color: cornflowerblue;
 }
 .gmap2 {
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 5px;
   background-color: cornflowerblue;
 }
 h4 {
   text-align: center;
-  background-color: burlywood;
-  padding: 5px;
+  background-color: rgb(26, 228, 235);
+  padding: 1px;
 }
 
 

@@ -75,9 +75,14 @@ main {
   font-size: 30px; 
   text-align: center; 
 } 
- 
+.registered {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
 .button-sign-up {
-  width: 35%;
+  width: 100%;
   padding: 1em 1em;
 
   font-size: 18px;
