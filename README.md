@@ -81,11 +81,12 @@ https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics
 
 ### Frontend part
 
+
 Vadim Savenkov:
 
-Worked with Cascading Style Sheet code to provide style consistency for forms through out.
+Worked with Cascading Style Sheet code to provide style consistency for all forms through out.
 
-Created additional Cascading Style Sheets for booking and contacting pages to avoid overwhelming with main.css
+Created additional css files for booking and contacting pages to avoid overwhelming with main.css
 
 Re-adjusted navigation panel, add highlighting effects to tabs, enhance each tab with additional icons.   
  
@@ -93,14 +94,18 @@ Researched for footer enhancements. Upgrade a footer with the company value mess
   
 Made a login form to be positioned in the middle of the page, work with font size and colors. 
 
-Added upgrades to registration form making    
+Added upgrades to registration/booking forms making it more user friendly.
+
+Selected colors, added highlighting and hovering effects to all submit buttons.
+
+Structured and wrote readme file.     
 
 
 Joyce Ou:
 
-Creation of the github repository.
+Created of the github repository.
 
-Creation of Welcome pages and all the background pictures and modified css stylesheet.
+Created of Welcome pages and all the background pictures and modified css stylesheet.
 
 Modified ejs and css style sheet on contact pages and packages. 
 
