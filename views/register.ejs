@@ -1,37 +1,36 @@
-<%- include('./partials/head'); %> 
 <%- include('./partials/css-global'); %>
+<%- include('./partials/head'); %>
 <%- include('./partials/header'); %>
 
-<body class="sky"> 
+<body class="register">
   <main class="register_form">
     <form action="/customers" method="post">
       <div class="container_register">
-        <h2 id="register">Registration</h2>
-          <label for="firstName" class="required">First Name:</label>
-            <input type = "text" placeholder = "First Name" name = "firstName" required>
-          <label for="lastName" class="required">Last Name:</label>
-            <input type = "text" placeholder = "Last Name" name = "lastName" required>
-          <label for="address" class="required">Address Details:</label>
-            <input type = "text" placeholder = "Street Address" name = "address" required>
-            <input type = "text" placeholder = "City" name = "city" required>
-            <input type = "text" placeholder = "Province" name = "prov" required>
-            <input type = "text" placeholder = "Postal Code" name = "postal" required>
-          <label for="homePhone" class="required">Home Phone:</label>
-            <input type = "text" placeholder = "Home Phone Number" name = "homePhone" required>
-          <label for="busPhone" class="required">Business Phone</label>
-            <input type = "text" placeholder = "Business Phone Number" name = "busPhone" required>
-          <label for="email" class="required">Email Address:</label>
-            <input type = "email" placeholder = "Email address" name="email" required>
-          <label for="userName" class="required">Create a Username:</label>
-            <input type = "text" placeholder = "User Name" name = "userid" required>
-          <label for="password" class="required">Create a Password:</label>
-            <input type = "password" placeholder= "Password" name = "passwd" minlength="8" required>
-          <button class= "submit_button">Submit!</button>
+        <legend id="register">Registration</legend>
+        <label for="firstName" class="required">First Name:</label>
+        <input type="text" placeholder="First Name" name="firstName" required>
+        <label for="lastName" class="required">Last Name:</label>
+        <input type="text" placeholder="Last Name" name="lastName" required>
+        <label for="address" class="required">Address Details:</label>
+        <input type="text" placeholder="Street Address" name="address" required>
+        <input type="text" placeholder="City" name="city" required>
+        <input type="text" placeholder="Province" name="prov" required>
+        <input type="text" placeholder="Postal Code" name="postal" required>
+        <label for="homePhone" class="required">Home Phone:</label>
+        <input type="text" placeholder="Home Phone Number" name="homePhone" required>
+        <label for="busPhone" class="required">Business Phone</label>
+        <input type="text" placeholder="Business Phone Number" name="busPhone" required>
+        <label for="email" class="required">Email Address:</label>
+        <input type="email" placeholder="Email address" name="email" required>
+        <label for="userName" class="required">Create a Username:</label>
+        <input type="text" placeholder="User Name" name="userid" required>
+        <label for="password" class="required">Create a Password:</label>
+        <input type="password" placeholder="Password" name="passwd" minlength="8" required>
+        <button>Submit!</button>
       </div>
     </form>
   </main>
 </body>
 
-  <%- include('./partials/js-global'); %>
-  <%- include('./partials/footer'); %>
-  
+<%- include('./partials/js-global'); %>
+<%- include('./partials/footer'); %>

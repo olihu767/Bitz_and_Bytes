@@ -28,12 +28,9 @@
 
 /* Change the background color on mouse-over */
 #navbar a:hover {
-  /* background-color: #0c0b0b; */
   color: white;
-  /* opacity: 0.4;  */
   border-bottom: 3px solid red;
 }
-
 
 /* Float the link section to the right */
 #navbar-right {
@@ -47,73 +44,76 @@
   font-size: 20px;
 }
 
-
- 
    /* ------------ */
   /* HERO SECTION */
  /*------------  */
  
  /* Section image */
 body {
-  margin: 0;  
-  background-image: url("../images/main_page.jpg"); 
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
   background-attachment: fixed;
-  justify-content: center;
-  padding: 0;    
+  background-image: url("../images/main_page.jpg"); 
 }
  
 main {
   display: flex;
   justify-content: center;
   align-items: center;
+
   margin-bottom: 100px;  
   margin-top: 100px;  
 } 
  
- /* Adjust header container in the middle of Hero section */ 
+ /* Adjust banner info in the middle of Hero section */ 
 .h1 { 
-  padding: 80px;    
-  font-variant: small-caps;   
-  font-size: 30px; 
-  text-align: center; 
   margin: 100px 0; 
-} 
- 
-.h2 { 
-  padding: 0;     
-  font-variant: small-caps;   
-  font-size: 20px; 
-  text-align: center; 
-  margin: 50px 0;   
-} 
- 
-.h3 { 
-  padding: 10px;    
+  
   font-variant: small-caps;   
   font-size: 30px; 
   text-align: center; 
-  margin: 100px 0;  
+  
 } 
  
 .button-sign-up {
-  padding: 1em 1em;
-  background-color:red;   
-  border: 1px solid black;
-  color: black;
-  text-decoration: none;
-  text-align: center; 
-  line-height: 40px;
   width: 35%;
-  border-radius: 8px;
-  font-weight: bold;
+  padding: 1em 1em;
+
   font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+
+  border: 1px solid black;
+  border-radius: 8px;
+
+  color: black;
+  background-color:red;  
 } 
  
 .button-sign-up:hover {
   background-image: linear-gradient(rgb(0,17,255), rgb(37,81,204));
+}
+ /*---------------------  */
+/* forms styling section */
+/* -------------------- */
+
+/* Style the submit button with a specific background color etc */
+button{
+  width: 100%;
+  margin: 8px 0;
+  padding: 15px;
+
+  font-size: 20px;
+  border: 2px solid #ccc; 
+  box-sizing: border-box; 
+  
+  background-color: #eb945b; 
+}
+  
+.required {
+  float: left;
+  font-family: "Karla", sans-serif; 
+  font-size: 20px; 
 }
  
 .required:after {
@@ -122,7 +122,7 @@ main {
 }
  
 input:focus:invalid  {
-  background-color: rgba(241, 41, 41, 0.64);
+  background-color:red;
   border: 0px;
   transition: background-color 300ms;
 }
@@ -131,7 +131,7 @@ input:focus:valid {
   background-color: rgba(56, 233, 21, 0.64);
   transition: background-color 300ms;
 }
-  
+
    /*----------------*/
   /*     PAGE 404   */
  /*----------------*/
@@ -145,6 +145,13 @@ input:focus:valid {
   font-size: 40px;
   color:blue;
   font-family: "Kurale", sans-serif;
+}
+
+/* Styles legends on all pages */
+legend {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
 }
  
 /* -------------- */
