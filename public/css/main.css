@@ -39,7 +39,6 @@
 }
 
 #navbar-right a {
-  /* font-family: "Rototo", sans-serif;   */
   font-family: "Comic Sans MS", "Comic Sans", cursive;
   font-size: 20px;
 }
@@ -101,7 +100,7 @@ main {
 
 /* Style the submit button with a specific background color etc */
 button{
-  width: 50%;
+  width: 100%;
   margin: 8px 0;
   padding: 15px;
 
@@ -121,6 +120,10 @@ button{
 .required:after {
   content:" *";
   color: red;
+}
+
+#navbar a.current {
+  color: blue;
 }
  
 input:focus:invalid  {
@@ -155,119 +158,6 @@ legend {
   color:blue;
   font-family: "Kurale", sans-serif;
 }
-
-/* -------------- */
-/* FOOTER SECTION */
-/* -------------- */
- 
- /* Footer Section settings */
-footer{
-	display: flex;
-  flex-wrap: wrap;
-  background-color: rgba(131, 23, 126, 0.8);   
-}
-
-
-.footer-distributed{
-	font: bold 16px sans-serif;
-}
- 
- 
-.footer-distributed .footer-left{
-  width: 40%;
-  padding-left: 200px;
-}
- 
-.footer-distributed h3{
-	color:  #0c0b0b;
-	font: normal 40px 'Cookie', cursive;
-	margin: 0;
-}
- 
- .footer-distributed h3 span{
-	color:  #5383d3;
-} 
- 
-.footer-distributed .footer-links{
-	color:  #0e0d0d;
-	margin: 20px 0 12px;
-  padding: 0;
-  font-size: 20px;
-}
-
-.footer-links a:hover {
-  border-bottom: 3px solid red;
-}
- 
-.footer-distributed .footer-links a{
-	line-height: 1.8;
-	text-decoration: none;
-	color: black;
-}
- 
-.footer-distributed .footer-company-name{
-	color:black;
-	font-size: 15px;
-	font-weight: normal;
-	margin: 0;
-}
- 
-.footer-distributed .footer-center p span{
-	display:block;
-	font-weight: normal;
-	font-size:14px;
-	line-height:2;
-}
- 
-.footer-distributed .footer-right{
-	width: 20%;
-}
- 
-.footer-distributed .footer-company-about{
-	line-height: 20px;
-	color:  black;
-	font-size: 20px;
-	font-weight: bold;
-  margin: 20px;
-  width: 130%;
-}
- 
-.footer-company-about span {
-  color:  #5383d3;
-  
-} 
-
-.footer-distributed .footer-company-about span{
-	display: block;
-	color: solid #5B6DCD;
-	font-size: 25px;
-	font-weight: bold;
-  margin: 10px;
-  margin-right: 50px; 
-  font-family: "Kurale", sans-serif;
-}
-
-.footer-distributed .footer-icons{
-	margin-top: 25px;
-}
- 
-.footer-distributed .footer-icons a{
-	display: inline-block;
-	width: 25px;
-	cursor: pointer;
-	background-color:  #33383b;
-	border-radius: 5px;
- 	font-size: 25px;
-	color: #ffffff;
-	text-align: center;
- 	margin-left: 20px; 
-	margin-bottom: 20px;  
-}
-
-#navbar a.current {
-  color: red;
-}
- 
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
 @media screen and (max-width: 500px) {

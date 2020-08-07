@@ -8,7 +8,6 @@
   border-radius: 20px; 
   background-color: #e4e5eb;
 
-  
 }
 
 /* packages style */
@@ -20,21 +19,27 @@ figure {
   border: thick rgb(132, 177, 214) solid;
   box-shadow: 10px 10px 15px 2px rgb(116, 167, 184);
   
-  font-size: 20px;
+  font-size: 25px;
   text-align: left;
 }
 
 label {
   font-size: 30px;
+  margin-left: 350px;
 }
 
-figure li
-{
+figure li {
+  font-size: 20px;
   list-style: none;
 }
 
 figure ul {
   padding: 0;
+}
+.order_btn {
+  margin-top: 40px;
+  margin-left: 425px;
+  width: 125px;
 }
 
 button a {
@@ -48,8 +53,11 @@ button:hover {
 }
 
 img {
+  float: right;
   border-radius: 60%;
-  float:right;
+  border: thick rgb(132, 177, 214) solid;
+  box-shadow: 10px 10px 15px 2px rgb(116, 167, 184);
+  
 }
 
 @media screen and (max-width: 600px) {
@@ -61,4 +69,11 @@ img {
     width: 85%;
     padding: 15px;
   }
+  button {
+   margin-left: 75px;
+  }
+  label {
+    margin-left: 25px;
+  }
 }
+
