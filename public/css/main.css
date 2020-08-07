@@ -67,15 +67,14 @@ main {
   margin-bottom: 100px;  
   margin-top: 100px;  
 } 
- 
+
  /* Adjust banner info in the middle of Hero section */ 
-.h1 { 
+.index { 
   margin: 100px 0; 
-  
+  padding: 5px;
   font-variant: small-caps;   
   font-size: 30px; 
   text-align: center; 
-  
 } 
  
 .button-sign-up {
@@ -267,7 +266,7 @@ footer{
  
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   #navbar a {
     float: none;
     display: block;
@@ -275,6 +274,34 @@ footer{
   }
   #navbar-right {
    float: none;
-   
+  }
+  .footer .footer-distributed {
+    margin: auto;
+  }
+  .footer-distributed .footer-left {
+    padding-left: 50px;
+    width: 100%;
+  }
+  
+  .footer-distributed .footer-right {
+    width: 70%;
+    margin-top: 0;
+  }
+  .footer-distributed .footer-company-about {
+    font-size: 15px;
+  }
+  .footer-distributed .footer-company-about span {
+   margin: 0;
+   margin-bottom: 20px;
+   font-size: 20px;
+  }
+  .footer-distributed .footer-icons {
+  margin-left: 80px;
+  }
+  .footer-distributed .footer-links {
+    font-size: 15px;
+  }
+  .footer-distributed .footer-company-name {
+    font-size: 12px;
   }
 }
