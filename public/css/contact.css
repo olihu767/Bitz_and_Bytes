@@ -14,8 +14,9 @@
   margin: auto;
   height: 475px;
   padding: 10px;
+  margin-right: 75px;
 
-  font-size: 35px;
+  font-size: 30px;
   font-family: "Kurale", sans-serif; 
 
   border-radius: 5px;
@@ -37,7 +38,7 @@ input[type=text], select, textarea {
 /* Style the agents and agencies section */
 .contact_info {
   padding: 15px;
-  margin-left: 150px;
+  margin-left: 120px;
   font-size: 20px;
   line-height: 1em;
 
@@ -45,6 +46,29 @@ input[type=text], select, textarea {
   background-color: rgb(214, 226, 247);
   box-shadow: 10px 10px 15px 2px rgb(173, 183, 230);   
 }
+.maps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.gmap1 {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: cornflowerblue;
+}
+.gmap2 {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: cornflowerblue;
+}
+h4 {
+  text-align: center;
+  background-color: burlywood;
+  padding: 5px;
+}
+
 
 @media screen and (max-width: 600px) {
   .contact {
@@ -66,6 +90,7 @@ input[type=text], select, textarea {
     margin: 0;
     margin-left: 20px;
     margin-top: 0px;
+    margin-bottom: 10px;
    
   }
   .container_contact {
