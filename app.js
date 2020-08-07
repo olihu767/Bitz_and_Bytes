@@ -41,6 +41,13 @@ db.once('open', function() {
 
 app.use(bodyParser.urlencoded ({extended:true}));
 
+// Cors origin URL - Allow inbound traffic from origin //
+corsOptions = {
+  origin: "https://travel-experts-prototype.herokuapp.com",
+  optionsSuccessStatus: 200 
+  };
+  app.use(cors(corsOptions));
+
 // Define an endpoint handler for the home page to render
 app.get('/', function(request, response){
   response.render('index', {title: "Home"});
