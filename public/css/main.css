@@ -11,8 +11,8 @@
 /* ------------------------- */
 #navbar {
   width: 100%;
-  padding: 60px; 
-  padding-top: 15px;
+  padding: 35px; 
+  padding-top: 20px;
   
   background-color: rgba(80, 90, 184, 0.472);  
 }
@@ -263,6 +263,10 @@ footer{
  	margin-left: 20px; 
 	margin-bottom: 20px;  
 }
+
+#navbar a.current {
+  color: red;
+}
  
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
@@ -280,5 +284,9 @@ footer{
   #navbar-right {
    float: none;
    padding: 0;
+  }
+  #logo {
+  margin-left: 60px;
+  margin-top: 10px;
   }
 }
