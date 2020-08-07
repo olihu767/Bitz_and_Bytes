@@ -35,9 +35,12 @@
   font-size: 15px;
   font-family: "Karla", sans-serif;  
 }
+button a {
+  font-size: 35px;
+  font-weight: bold;
+}
 
 .register_btn {
-  font-size: 10px;
   border: 2px solid #ccc; 
   background-color: #3ccf1f; 
 }

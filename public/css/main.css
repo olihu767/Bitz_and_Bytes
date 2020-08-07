@@ -63,8 +63,8 @@ main {
   justify-content: center;
   align-items: center;
 
-  margin-bottom: 100px;  
-  margin-top: 100px;  
+  margin-bottom: 90px;  
+  margin-top: 90px;  
 } 
 
  /* Adjust banner info in the middle of Hero section */ 
@@ -104,7 +104,7 @@ button{
   margin: 8px 0;
   padding: 15px;
 
-  font-size: 20px;
+  font-size: 25px;
   border: 2px solid #ccc; 
   box-sizing: border-box; 
   

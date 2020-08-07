@@ -16,8 +16,8 @@ fetch('http://localhost:3000/api/packages')
     packagesList.forEach(function (item) {
       packagesTemplate +=
         `<figure>
-          <label>${item.PkgName}</label>
-          <img src="https://picsum.photos/id/${item.ImgId}/325" alt="${item.PkgName}">
+          <div class="label">${item.PkgName}</div>
+          <img src="https://picsum.photos/id/${item.ImgId}/300" alt="${item.PkgName}">
           </a>
           <ul>
             <li>${item.PkgDesc}</li><br>

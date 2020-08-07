@@ -10,10 +10,10 @@
 
 /* Adjust contact container */
 .container_contact {
-  width: 40%;
+  width: 30%;
   margin: auto;
- 
-  padding: 15px;
+  height: 475px;
+  padding: 10px;
 
   font-size: 35px;
   font-family: "Kurale", sans-serif; 
@@ -21,6 +21,10 @@
   border-radius: 5px;
   box-shadow: 10px 10px 15px 2px lightblue;
   background-color: rgb(247, 214, 214);
+}
+
+#contactform {
+  font-size: 35px;
 }
 
 input[type=text], select, textarea {
@@ -33,7 +37,7 @@ input[type=text], select, textarea {
 /* Style the agents and agencies section */
 .contact_info {
   padding: 15px;
-
+  margin-left: 150px;
   font-size: 20px;
   line-height: 1em;
 
@@ -43,7 +47,31 @@ input[type=text], select, textarea {
 }
 
 @media screen and (max-width: 600px) {
+  .contact {
+    margin: 0;
+    width: 100%;
+  }
+  main.contact_section {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .contact_info {
+    width: 100%;
+    padding-left: 30px;
+
+    margin: 0;
+    margin-left: 20px;
+    margin-top: 0px;
+   
+  }
   .container_contact {
-    width: 85%;
+    width: 100%;
+    margin: 0;
+    margin-left: 20px;
+    margin-top: 10px;
   }
 }
