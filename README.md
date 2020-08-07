@@ -137,11 +137,25 @@ Cleaned up small issues with syntax and corrected typos.
 Provided general feedback and contribution to design, styling and functionality
 
 Dave Hahner:
+  Project Manager-
+ 	  Communicated to the group the initial project information obtained during the kick-off meeting held July 24 from 14:00 -14:28.
+ 	  Facilitated the creation of the team name.
+ 	  Created the Group Charter Template.
+ 	  Collaborated with the team members to determine each participants roles and responsibilities, and document them in the charter and finalize.
+ 	  Created Gantt chart.
+ 	  Created .ppt presentation template, populate the data in collaboration with the team.
+ 	  Send Meeting invites and agendas.
 
+  Dev Ops-
+ 	  Managed MongoDB databases and connections to the required pages: posts and creates, (app.js)
+    Created Models, nav.js, manipulated .ejs files as necessary
 
+  Tester-
+ 	  Tested site functionality, debugging and error reporting to the other team members.
+    Reviewed and cleansed all CSS
 
 
 ## Acknowledgements
 
-Tony Grimes - adjunct instructor at SAIT.
-Dave Hahner - team lead. 
+Tony Grimes - Adjunct Instructor at SAIT.
+Dave Hahner - Team Lead. 
