@@ -39,10 +39,6 @@ input[type=date], input[type=text] {
   font-family: "Karla", sans-serif;   
 }
 
-  /* ------------------ */
- /* BOOKING CONTAINER */
-/* ------------------ */
-
 /* Adjust container  */ 
 .packages {
   display: flex;
