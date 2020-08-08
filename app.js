@@ -142,9 +142,9 @@ app.post ("/customers", function(req, res){
 
   Customer.create(newCustomer, function(err, newlyCreated){
     if (err){
-      console.log(err)
+      // console.log(err)
     } else {
-        console.log(newCustomer)
+        // console.log(newCustomer)
           res.redirect("/registered")
     }
   });
@@ -169,9 +169,9 @@ app.post ("/bookings", function(req, res){
 
   Bookings.create(newBookings, function(err, newlyCreated){
     if (err){
-      console.log(err)
+      // console.log(err)
     } else {
-        console.log(newBookings)
+        // console.log(newBookings)
           res.redirect("/thankyou")
     }
   }); 
@@ -189,9 +189,9 @@ app.post ("/comments", function(req, res){
 
   Comments.create(newComments, function(err, newlyCreated){
     if (err){
-      console.log(err)
+      // console.log(err)
     } else {
-        console.log(newComments)
+        // console.log(newComments)
           res.redirect("/")
     }
   }); 
