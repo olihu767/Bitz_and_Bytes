@@ -15,14 +15,6 @@ app.set('view engine', 'ejs');
 // automatically check if requested file is found in /public. If yes, return that file as a response to the browser
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Cors origin URL - Allow inbound traffic from origin //
-corsOptions = {
-  origin: "https://travel-experts-prototype.herokuapp.com",
-  optionsSuccessStatus: 200 
-  };
-  app.use(cors(corsOptions));
-
-
 // Models
 const Customer   = require("./models/customers.js");
 const Bookings   = require("./models/bookings.js");
@@ -48,6 +40,13 @@ db.once('open', function() {
 });
 
 app.use(bodyParser.urlencoded ({extended:true}));
+
+// Cors origin URL - Allow inbound traffic from origin //
+corsOptions = {
+  origin: "https://travel-experts-prototype.herokuapp.com",
+  optionsSuccessStatus: 200 
+  };
+  app.use(cors(corsOptions));
 
 
 // Define an endpoint handler for the home page to render
