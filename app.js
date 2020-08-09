@@ -8,6 +8,15 @@ const moment     = require('moment');
 const today      = moment();
 const bodyParser = require('body-parser');
 
+// Models
+const Customer   = require("./models/customers.js");
+const Bookings   = require("./models/bookings.js");
+const Packages   = require("./models/packages.js");
+const Agencies   = require("./models/agencies.js");
+const Agents     = require("./models/agents.js");
+const Comments   = require("./models/comments.js");
+const { forEach } = require('async');
+
 // create express app
 const app        = express();
 app.set('view engine', 'ejs');
@@ -15,19 +24,10 @@ app.set('view engine', 'ejs');
 // automatically check if requested file is found in /public. If yes, return that file as a response to the browser
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Models
-const Customer   = require("./models/customers.js");
-const Bookings   = require("./models/bookings.js");
-const Packages   = require("./models/packages.js");
-const Agencies   = require("./models/agencies.js");
-const Agents     = require("./models/agents.js");
-const Comments   = require("./models/comments.js")
-const { forEach } = require('async');
-
 // MongoDB connection
 const mongoDB = process.env.MONGODB_URL;
 
-mongoose.connect(mongoDB, { useUnifiedTopology: true,useNewUrlParser: true });
+mongoose.connect(mongoDB, { useUnifiedTopology: true, useNewUrlParser: true });
 
 const db = mongoose.connection;
 
@@ -39,7 +39,7 @@ db.once('open', function() {
   console.log('Congrats! You are connected to MongoDB...');
 });
 
-app.use(bodyParser.urlencoded ({extended:true}));
+
 
 // Cors origin URL - Allow inbound traffic from origin //
 corsOptions = {
@@ -49,9 +49,9 @@ corsOptions = {
   app.use(cors(corsOptions));
 
 
-// Define an endpoint handler for the home page to render
+// Endpoint handler for the home page to render
 app.get('/', function(request, response){
-  response.render('index', {title: "Home"});
+  response.render('index',{title: "Home"});
 });
 
 app.get('/login', function(request, response){
@@ -108,6 +108,8 @@ app.get('/api/packages', function(request, response,){
     response.json(packages);
   });
 });
+
+app.use(bodyParser.urlencoded ({extended:true}));
 
 // Adds new customer registration info into Mongo database
 app.post ("/customers", function(req, res){
