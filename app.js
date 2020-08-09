@@ -28,8 +28,8 @@ const dbURI = process.env.MONGODB_URL;
 mongoose.connect(dbURI, {useUnifiedTopology: true, useNewUrlParser: true});
 
 // MongoDB connection
-const mongoDB = process.env.MONGODB_URL;
-mongoose.connect(mongoDB, { useUnifiedTopology: true, useNewUrlParser: true });
+// const mongoDB = process.env.MONGODB_URL;
+// mongoose.connect(mongoDB, { useUnifiedTopology: true, useNewUrlParser: true });
 const db = mongoose.connection;
 
 // Bind connection to error event (to get notification of connection errors) //
