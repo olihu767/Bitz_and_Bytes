@@ -1,7 +1,7 @@
 // Fetch the data from the packages database in MongoDB
 
 // fetch('http://localhost:3000/api/packages')
-  fetch('https:// https://travel-experts-prototype.herokuapp.com/api/packages')
+  fetch('https:// https://bitzandbytes.herokuapp.com/api/packages')
   .then(function (response) {
     return response.json();
   })
