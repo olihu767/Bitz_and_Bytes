@@ -138,7 +138,7 @@ Provided general feedback and contribution to design, styling and functionality
 
 Created project presentation layout
 
-Heroku Dev ops
+Contributed to Heroku Dev Ops
 
 Dave Hahner:
   Project Manager-
