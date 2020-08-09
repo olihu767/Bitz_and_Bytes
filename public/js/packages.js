@@ -14,6 +14,22 @@
 
     const packages = document.querySelector('.packages');
 
+//     This is our attempt at creating a way to compare our package start date with the actual current date.
+// Since we are doing this on the front end, we are using Date.now which provides a unix time stamp of the current 
+// date in seconds, we then compare it to our package start date converted into an integer, and then into seconds. An "if" 
+// statement then would use the outcome of the comparison to change a class of css to make a change that the user would
+// see as defining the package date as no longer selectable. This broke our packages page, whether placed inside or outside
+// the loop. If we had used .Find instead of a loop to call our packages we are speculating that we may have been able to get it
+// to work. 
+
+// var pkgDate = parseInt((new Date('${item.PkgStartDate}').getTime() / 1000).toFixed(0));
+// var currentDate = Math.floor(Date.now()/1000);
+//     if (currentDate < pkgDate){
+//         className = goodDate};
+//         else{
+//             className = badDate
+//      
+
     packagesList.forEach(function (item) {
       packagesTemplate +=
         `<figure>

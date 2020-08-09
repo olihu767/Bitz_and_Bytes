@@ -136,6 +136,10 @@ Cleaned up small issues with syntax and corrected typos.
 
 Provided general feedback and contribution to design, styling and functionality
 
+Created project presentation layout
+
+Heroku Dev ops
+
 Dave Hahner:
   Project Manager-
  	  Communicated to the group the initial project information obtained during the kick-off meeting held July 24 from 14:00 -14:28.
@@ -148,11 +152,13 @@ Dave Hahner:
 
   Dev Ops-
  	  Managed MongoDB databases and connections to the required pages: posts and creates, (app.js)
-    Created Models, nav.js, manipulated .ejs files as necessary
+    Created Models, nav.js, manipulated .ejs files as necessary.
+		Created heroku page and connected site through Heroku CLI.
+		Contributed fto overall presentation, spoke to app.js get and post working with mongoDB.
 
   Tester-
  	  Tested site functionality, debugging and error reporting to the other team members.
-    Reviewed and cleansed all CSS
+    Reviewed and cleansed all CSS.
 
 
 ## Acknowledgements
