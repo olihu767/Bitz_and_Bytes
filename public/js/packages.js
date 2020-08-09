@@ -28,7 +28,6 @@
             <button class="order_btn"><a href ="/${item.PkgPage}">Book Now!</a></button>
           </ul>
         </figure>`;
-
       packages.innerHTML = packagesTemplate;
     });
   });
