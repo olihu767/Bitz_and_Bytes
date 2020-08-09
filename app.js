@@ -24,8 +24,14 @@ app.set('view engine', 'ejs');
 // automatically check if requested file is found in /public. If yes, return that file as a response to the browser
 app.use(express.static(path.join(__dirname, 'public')));
 
-// MongoDB connection
 const dbURI = process.env.MONGODB_URL;
+// mongoose.connect(dbURI, {
+//   useUnifiedTopology: true,
+//   useNewUrlParser: true
+// });
+
+// MongoDB connection
+const mongoDB = process.env.MONGODB_URL;
 
 mongoose.connect(mongoDB, { useUnifiedTopology: true, useNewUrlParser: true });
 
