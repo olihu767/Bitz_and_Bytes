@@ -25,7 +25,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 // MongoDB connection
-const mongoDB = process.env.MONGODB_URL;
+const dbURI = process.env.MONGODB_URL;
 
 mongoose.connect(mongoDB, { useUnifiedTopology: true, useNewUrlParser: true });
 
