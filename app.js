@@ -24,12 +24,12 @@ app.set('view engine', 'ejs');
 // automatically check if requested file is found in /public. If yes, return that file as a response to the browser
 app.use(express.static(path.join(__dirname, 'public')));
 
-const dbURI = process.env.MONGODB_URL;
-mongoose.connect(dbURI, {useUnifiedTopology: true, useNewUrlParser: true});
+// const dbURI = process.env.MONGODB_URL;
+// mongoose.connect(dbURI, {useUnifiedTopology: true, useNewUrlParser: true});
 
 // MongoDB connection
-// const mongoDB = process.env.MONGODB_URL;
-// mongoose.connect(mongoDB, { useUnifiedTopology: true, useNewUrlParser: true });
+const mongoDB = process.env.MONGODB_URL;
+mongoose.connect(mongoDB, { useUnifiedTopology: true, useNewUrlParser: true });
 const db = mongoose.connection;
 
 // Bind connection to error event (to get notification of connection errors) //
@@ -44,7 +44,7 @@ db.once('open', function() {
 
 // Cors origin URL - Allow inbound traffic from origin //
 corsOptions = {
-  origin: "https://travel-experts-prototype.herokuapp.com",
+  origin: "https://bitsandbytes.herokuapp.com",
   optionsSuccessStatus: 200 
   };
   app.use(cors(corsOptions));
