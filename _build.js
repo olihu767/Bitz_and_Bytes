@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
 
 // Import seed data //
-const dbSeed = require('./seeds/packages.js');
+// const dbSeed = require('./seeds/packages.js');
 
 // Define model //
 const Packages = require('./models/packages.js');
