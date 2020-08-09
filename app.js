@@ -25,16 +25,11 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 const dbURI = process.env.MONGODB_URL;
-// mongoose.connect(dbURI, {
-//   useUnifiedTopology: true,
-//   useNewUrlParser: true
-// });
+mongoose.connect(dbURI, {useUnifiedTopology: true, useNewUrlParser: true});
 
 // MongoDB connection
 const mongoDB = process.env.MONGODB_URL;
-
 mongoose.connect(mongoDB, { useUnifiedTopology: true, useNewUrlParser: true });
-
 const db = mongoose.connection;
 
 // Bind connection to error event (to get notification of connection errors) //
