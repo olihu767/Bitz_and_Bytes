@@ -1,5 +1,5 @@
   /* ---------------- */
-  /*   TOPOGRAPHY     */
+  /*   TYPOGRAPHY     */
  /* ---------------- */
 
  @import url('https://fonts.googleapis.com/css2?family=Kurale&family=Raleway:ital,wght@0,100;0,200;0,500;0,700;1,100;1,900&display=swap');
@@ -100,7 +100,7 @@ main {
   background-image: linear-gradient(rgb(0,17,255), rgb(37,81,204));
 }
  /*---------------------  */
-/* forms styling section */
+/* FORMS STYLING SECTION */
 /* -------------------- */
 
 /* Style the submit button with a specific background color etc */

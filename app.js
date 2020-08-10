@@ -1,4 +1,4 @@
-// import all modules
+// Import all modules
 const path       = require('path');
 const express    = require('express');
 const mongoose   = require('mongoose');
@@ -17,18 +17,16 @@ const Agents     = require("./models/agents.js");
 const Comments   = require("./models/comments.js");
 const { forEach } = require('async');
 
-// create express app
+// Create express app
 const app        = express();
 app.set('view engine', 'ejs');
 
-// automatically check if requested file is found in /public. If yes, return that file as a response to the browser
+// Automatically check if requested file is found in /public. If yes, return that file as a response to the browser
 app.use(express.static(path.join(__dirname, 'public')));
 
-// MongoDB connection
+// MongoDB connection:
 const mongoDB = process.env.MONGODB_URL;
-
 mongoose.connect(mongoDB, { useUnifiedTopology: true, useNewUrlParser: true });
-
 const db = mongoose.connection;
 
 // Bind connection to error event (to get notification of connection errors) //
@@ -46,7 +44,7 @@ corsOptions = {
   };
   app.use(cors(corsOptions));
 
-// Endpoint handler for the home page to render
+// Endpoint handlers for the pages:
 app.get('/', function(request, response){
   response.render('index',{title: "Home"});
 });
@@ -105,7 +103,7 @@ app.get('/api/packages', function(request, response,){
     response.json(packages);
   });
 });
-
+//  for use with bodyParser for posting data to MongoDB
 app.use(bodyParser.urlencoded ({extended:true}));
 
 // Adds new customer registration info into Mongo database
@@ -195,7 +193,7 @@ app.post ("/comments", function(req, res){
   }); 
 });
 
-/// necessary for 4 digit year in footer //
+// Necessary for 4 digit year in footer //
 app.locals.moment = moment;
 
 // If no file or endpoint found, send a response to the 404 page //
@@ -204,7 +202,7 @@ app.use(function(req, res, next) {
     res.render('404', {title: "404"});
 });
 
-// Start up server //
+// Start up server 
 const PORT = process.env.PORT || 3000;
   app.listen(PORT, function(){
     console.log(`Listening on port ${PORT}`);
