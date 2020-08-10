@@ -39,7 +39,7 @@ db.once('open', function() {
 
 // Cors origin URL - Allow inbound traffic from origin //
 corsOptions = {
-  origin: "https://travel-experts-prototype.herokuapp.com",
+  origin: "https://bitsandbytes.herokuapp.com",
   optionsSuccessStatus: 200 
   };
   app.use(cors(corsOptions));

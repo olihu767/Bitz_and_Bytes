@@ -2,7 +2,7 @@
 // use local 3000 for testing
 // fetch('http://localhost:3000/api/packages')
 
-  fetch('https://travel-experts-protoype.herokuapp.com/api/packages')
+  fetch('https://bitzandbytes.herokuapp.com/api/packages')
   .then(function (response) {
     return response.json();
   })
